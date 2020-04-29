@@ -12,11 +12,19 @@
 				<div class="features-block__back">
 					{% if feature.networkers %}
 					<div class="networkers">
-						{% for person in speakers[pageKey] %}
-						<div class="networkers__item">
-							<img class="networkers__speaker" src="{{person.avatar}}"/>
-							<p class="networkers__time">{{person.time}}</p>
-						</div>
+						{% for i in range(0, 12) -%}
+							<div class="networkers__item">
+								{% if speakers[pageKey][i].avatar %}
+									<img class="networkers__speaker" src="{{speakers[pageKey][i].avatar}}"/>
+									<p class="networkers__time">{{speakers[pageKey][i].time}}</p>
+								{% else %}
+									<div class="networkers__face-wrap">
+										<svg class="icon networkers__face icon-face_{{[loop.index]}}">
+											<use xlink:href="img/sprite.svg#icon-face_{{[loop.index]}}"></use>
+		                				</svg>
+	                				</div>
+								{% endif %}
+							</div>
 						{% endfor %}
 					</div>
 					{% endif %}
