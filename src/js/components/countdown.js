@@ -29,7 +29,7 @@ const timeDiff = (startStr, nowStr) => {
 
 export default function countdown() {
   // Set the date we're counting down to
-  var utmStart = new Date('May 24, 2020 13:00:00 GMT').getTime();
+  var utmStart = new Date('June 19, 2020 14:00:00 GMT').getTime();
 
   var leadingZero = function(n) {
     if (n < 10 && n >= 0) return '0' + n;
