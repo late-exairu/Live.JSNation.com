@@ -3,6 +3,7 @@
 		<h3 class="section__title">{{ mixins.text(pieceOfTexts, 'zoombars__title') }}</h3>
 		<h4 class="section__subtitle">{{ mixins.text(pieceOfTexts, 'zoombars__subtitle') }}</h4>
 
+		{% if pages[pageKey].pageSections.zoomBars[0].title %}
 		<div class="bars-list">
 			{% for bar in pages[pageKey].pageSections.zoomBars %}
 			<div class="bars-list__item">
@@ -32,6 +33,7 @@
 			</div>
 			{% endfor %}
 		</div>
+		{% endif %}
 
 
 	</div>
