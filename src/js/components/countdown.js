@@ -51,7 +51,6 @@ export const countdown = () => {
     const toStart = calcTime(now, start);
     const toEnd = calcTime(now, end);
     if (toStart) {
-      console.log('render -> toStart', toStart);
       updateTimer(toStart);
       return false;
     }
