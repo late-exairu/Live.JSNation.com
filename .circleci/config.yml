@@ -34,15 +34,20 @@ commands:
           name: deploy storybook
           command: CMS_ENDPOINT=$CMS_ENDPOINT CMS_TOKEN=$CMS_TOKEN yarn deploy:storybook
 
+workflows:
+  build:
+    jobs:
+      - build:
+        filters:
+          branches:
+            only:
+              - master
+
 jobs:
   # This command is a supplement build next to what runs in Netlify (main dev website deploy)
   build:
     docker:
       - image: circleci/node:10
-
-    branches:
-      ignore:
-        - gh-pages
 
     steps:
       - dependencies
