@@ -40,6 +40,10 @@ jobs:
     docker:
       - image: circleci/node:10
 
+    branches:
+      ignore:
+        - gh-pages
+
     steps:
       - dependencies
       - deploy-storybook
