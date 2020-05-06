@@ -1,7 +1,7 @@
 <section class="section articles">
   <div class="container">
-    <div class="articles__title">Would like to work together with the most notable React community supporters?</div>
-    <div class="articles__subtitle">Check out these React job offers form our partners.</div>
+    <div class="articles__title">{{ mixins.text(pieceOfTexts, 'jobs__title') }}</div>
+    <div class="articles__subtitle">{{ mixins.text(pieceOfTexts, 'jobs__desc') }}</div>
   </div>
   <div class="articles__content">
     {% for item in pages[pageKey].pageStatistics.articles %}
