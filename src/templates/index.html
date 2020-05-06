@@ -113,7 +113,9 @@ fakeLinks: true
 			{% include "partials/_awards.html" %}
 		{% endif %}
 		
+		{% if pages[pageKey].pageSections.back %}
 			{% include "partials/_back-to-community.html" %}
+		{% endif %}
 		
 		{% if pages[pageKey].pageSections.sponsors %}
 			{% include "partials/_sponsors.html" %}

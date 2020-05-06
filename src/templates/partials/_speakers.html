@@ -28,11 +28,19 @@
 					</div>
 				</div>
 			{% endfor %}
+
+			{% if (pages[pageKey].pageSections.cfp) %}
+			<div class="speakers-list__item speakers-list__item_cfp">
+				<p class="speaker__name">{{ pages[pageKey].pageSections.cfpTitle }}</p>
+				<p class="speaker__company">{{ pages[pageKey].pageSections.cfpDesc }}</p>
+				<a class="btn" href="{{ pages[pageKey].pageSections.cfpLink }}">{{ pages[pageKey].pageSections.cfpLinkText }}</a>
+			</div>
+			{% endif %}
 		</div>
 		{% if pageKey === "main" %}
 			{% if speakersBtn %}
 			<div class="speakers__btn">
-				<a href="https://docs.google.com/forms/d/e/1FAIpQLSf1gJZym7y79DcqFyG6sZ6-uoxDBnczD0pI7JGcXySwVZ6MfQ/viewform" target="_blank" class="btn btn--gradient">Submit a talk</a>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSf1gJZym7y79DcqFyG6sZ6-uoxDBnczD0pI7JGcXySwVZ6MfQ/viewform" target="_blank" class="btn">Submit a talk</a>
 			</div>
 			{% endif %}
 		{% endif %}
