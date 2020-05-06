@@ -7,17 +7,9 @@
     </div>
     <div class="hero__suptitle">{{ pages.extended.pageSections.hero_subtitle }}</div>
     <h1 class="hero__title">{{ pages.extended.pageSections.hero_title }}</h1>
-    <div class="hero__info">
-      <ul class="h-list h-list_min">
-        <li class="h-list__item">
-          <div class="h-list__value">{{ pages.extended.pageStatistics.days}}</div>
-          <div class="h-list__text">Days</div>
-        </li>
-        <li class="h-list__item">
-          <div class="h-list__value"><img src="img/infinity.png" alt=""/></div>
-          <div class="h-list__text">Happiness</div>
-        </li>
-      </ul>
-    </div>
+    
+	{% if pages[pageKey].pageStatistics.eventStats %}
+		{{mixins.eventStats(pages[pageKey].pageStatistics.eventStats)}}
+	{% endif %}
   </div>
 </div>
