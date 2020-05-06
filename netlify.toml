@@ -3,13 +3,14 @@ publish = "build"
 command = "yarn build"
 
 [[redirects]]
+  from = "/sponsors"
+  to = "/sponsors/"
+  status = 301
+
+
+[[redirects]]
   from = "/sponsors/*"
   to = "https://sponsors.gitnation.org/jsnationlive/:splat"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
-
-[[redirects]]
-  from = "/sponsors"
-  to = "/sponsors/"
-  status = 301
