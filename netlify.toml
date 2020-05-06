@@ -4,8 +4,8 @@ command = "yarn build"
 
 
 [[redirects]]
-  from = "/sponsors"
-  to = "https://sponsors.gitnation.org/jsnationlive"
+  from = "/sponsors/*"
+  to = "https://sponsors.gitnation.org/jsnationlive/:splat"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
