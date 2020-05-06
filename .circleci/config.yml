@@ -1,81 +1,83 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/node:10
+version: 2.1
 
+commands:
+  dependencies:
     steps:
       - checkout
 
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - v1-dependencies-{{ checksum "yarn.lock" }}
 
       - run:
           name: install dependencies
           command: |
-            # if [ ! -d "node_modules" ]; then
-            yarn install
-            # fi
+            if [ ! -d "node_modules" ]; then
+              yarn install
+            fi
 
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
 
-      # - run:
-      #     name: smoke test
-      #     command: yarn test:smoke
-
+  build-site:
+    steps:
       - run:
           name: build website
-          # Example CMS_ENDPOINT=https://api-euwest.graphcms.com/v1/ck0qr5av409372639206aeqn/master
-          command: |
-            if [ $CIRCLE_BRANCH = "master" ]; then
-              CMS_ENDPOINT=$CMS_ENDPOINT CMS_TOKEN=$CMS_TOKEN yarn build
-            fi
-            if [ $CIRCLE_BRANCH != "master" ]; then
-              CMS_ENDPOINT=$CMS_ENDPOINT CMS_TOKEN=$CMS_TOKEN_DEV yarn build
-            fi
+          command: CMS_ENDPOINT=$CMS_ENDPOINT CMS_TOKEN=$CMS_TOKEN yarn build
 
-      # - run:
-      #     name: test
-      #     command: |
-      #       if [ $CIRCLE_BRANCH != "master" ]; then
-      #         yarn test:build
-      #       fi
-
-      # Uncomment to build last year
-      # - run: cd 2018 && yarn install && yarn build && cd ..
-
+  deploy-storybook:
+    steps:
       - run:
-          name: deploy to remote
-          command: |
-            if [ $CIRCLE_BRANCH = "master" ]; then
-              ./node_modules/.bin/gulp deploy --user $FTP_USER --password $FTP_PASSWORD
-            fi
-            if [ $CIRCLE_BRANCH = "develop" ]; then
-              ./node_modules/.bin/gulp deploy --user $FTP_USER_DEV --password $FTP_PASSWORD_DEV
-            fi
+          name: deploy storybook
+          command: CMS_ENDPOINT=$CMS_ENDPOINT CMS_TOKEN=$CMS_TOKEN yarn deploy:storybook
 
-      - run:
-          name: Message to Slack
-          command: |
-            if [ $CIRCLE_BRANCH = "master" ]; then
-              curl -X POST -H 'Content-type: application/json' --data '{"blocks":[{"type":"context","elements":[{"type":"image","image_url":"https://live.jsnation.com/img/favicon.png","alt_text":"live.jsnation.com"},{"type":"mrkdwn","text":"*Live JS Nation*"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"https://live.jsnation.com"}]},{"type":"section","text":{"type":"mrkdwn","text":"website is deployed to *production* :tada:"}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":":hammer_and_wrench: *Tools:*"}},{"type":"context","elements":[{"type":"mrkdwn","text":"Staging: https://staging-live.jsnation.com/"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"Inline mode: http://staging.live.jsnation.com?inline"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"Storybook: https://gitnation.github.io/Live.JSNation.com"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"GrapCMS event: https://legacy.graphcms.com/8be1ceff148c4b749e78b34007f9cc34/master/content/bf61477d3b8a440ba9439fa6a32eb60f/table/ck9egy7ue3ckv0b84utrdd9w2"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"Github: https://github.com/GitNation/Live.JSNation.com"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"Build info: '$CIRCLE_BUILD_URL'"}]}]}' $SLACK_CMS_UPDATE
-            fi
+workflows:
+  build:
+    jobs:
+      - build:
+        filters:
+          branches:
+            only:
+              - master
 
+jobs:
+  # This command is a supplement build next to what runs in Netlify (main dev website deploy)
+  build:
+    docker:
+      - image: circleci/node:10
+
+    steps:
+      - dependencies
+      - deploy-storybook
+
+  # This command is being only called by CMS to trigger deploy to staging
+  buildAndDeployToDev:
+    docker:
+      - image: circleci/node:10
+
+    steps:
+      - dependencies
+      - build-site
       - run:
-          name: deploy Storybook
+          name: deploy to netlify
           command: |
-            if [ $CIRCLE_BRANCH = "master" ]; then
-              CMS_ENDPOINT=$CMS_ENDPOINT CMS_TOKEN=$CMS_TOKEN yarn deploy:storybook
-            fi
+            yarn netlify deploy --auth $NETLIFY_AUTH_TOKEN --prod --site $NETLIFY_SITE_DEV
+
+  # This command is being only called directly via API referencing this job to manually trigger production deploy to Netlify
+  buildAndDeployToProd:
+    docker:
+      - image: circleci/node:10
+
+    steps:
+      - dependencies
+      - build-site
+      - run:
+          name: deploy to netlify
+          command: |
+            yarn netlify deploy --auth $NETLIFY_AUTH_TOKEN --prod --site $NETLIFY_SITE_PROD
+            curl -X POST -H 'Content-type: application/json' --data '{"blocks":[{"type":"context","elements":[{"type":"image","image_url":"https://live.jsnation.com/img/favicon.png","alt_text":"live.jsnation.com"},{"type":"mrkdwn","text":"*Live JS Nation*"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"https://live.jsnation.com"}]},{"type":"section","text":{"type":"mrkdwn","text":"website is deployed to *production* :tada:"}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":":hammer_and_wrench: *Tools:*"}},{"type":"context","elements":[{"type":"mrkdwn","text":"Staging: https://staging-live.jsnation.com/"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"Inline mode: http://staging-live.jsnation.com?inline"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"Storybook: https://gitnation.github.io/Live.JSNation.com"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"GrapCMS event: https://legacy.graphcms.com/8be1ceff148c4b749e78b34007f9cc34/master/content/bf61477d3b8a440ba9439fa6a32eb60f/table/ck9egy7ue3ckv0b84utrdd9w2"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"Github: https://github.com/GitNation/Live.JSNation.com"}]},{"type":"context","elements":[{"type":"mrkdwn","text":"Build info: '$CIRCLE_BUILD_URL'"}]}]}' $SLACK_CMS_UPDATE
+
 
