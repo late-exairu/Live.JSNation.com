@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const util = require('gulp-util');
 const config = require('./gulp/config');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 function createConfig(env) {
   let isProduction,
@@ -48,12 +46,6 @@ function createConfig(env) {
         'window.jQuery': 'jquery',
       }),
       new webpack.NoEmitOnErrorsPlugin(),
-
-      new BundleAnalyzerPlugin({
-        analyzerMode: 'static',
-        analyzerPort: 4000,
-        openAnalyzer: false,
-      }),
     ],
     resolve: {
       extensions: ['.js'],

@@ -3,6 +3,8 @@ publish = "build"
 command = "yarn build"
 
 [[redirects]]
-  from = "/sponsors*"
+  from = "/sponsors/*"
   to = "https://sponsors.gitnation.org/jsnationlive"
   status = 200
+  force = true
+  headers = {X-From = "Netlify"}

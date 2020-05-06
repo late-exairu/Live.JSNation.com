@@ -89,7 +89,6 @@
     "run-sequence": "^2.2.1",
     "through2": "^2.0.1",
     "webpack": "^4.6.0",
-    "webpack-bundle-analyzer": "^3.6.0",
     "webpack-glsl-loader": "^1.0.1"
   },
   "dependencies": {
