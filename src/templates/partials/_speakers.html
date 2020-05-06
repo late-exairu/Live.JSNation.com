@@ -31,8 +31,8 @@
 
 			{% if (pages[pageKey].pageSections.cfp) %}
 			<div class="speakers-list__item speakers-list__item_cfp">
-				<p class="speaker__name">{{ pages[pageKey].pageSections.cfpTitle }}</p>
-				<p class="speaker__company">{{ pages[pageKey].pageSections.cfpDesc }}</p>
+				<p class="speaker__name">{{ pages[pageKey].pageSections.cfpTitle | safe }}</p>
+				<p class="speaker__company">{{ pages[pageKey].pageSections.cfpDesc | safe }}</p>
 				<a class="btn" href="{{ pages[pageKey].pageSections.cfpLink }}">{{ pages[pageKey].pageSections.cfpLinkText }}</a>
 			</div>
 			{% endif %}
