@@ -4,5 +4,5 @@ command = "yarn build"
 
 [[redirects]]
   from = "/sponsors*"
-  to = "https://sponsors.gitnation.org/jsnationlive/:splat"
+  to = "https://sponsors.gitnation.org/jsnationlive"
   status = 200
