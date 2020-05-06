@@ -19,7 +19,7 @@ commands:
 
       - save_cache:
           paths:
-            - frontend/node_modules
+            - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
   build-site:

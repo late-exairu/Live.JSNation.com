@@ -96,9 +96,9 @@
     "gulp-hash": "^4.2.2",
     "gulp-hash-references": "^3.0.1",
     "js-yaml": "^3.12.1",
+    "netlify-cli": "^2.48.0",
     "svg4everybody": "^2.1.9",
-    "swiper": "^4.4.6",
-    "vinyl-ftp": "^0.6.1"
+    "swiper": "^4.4.6"
   },
   "relativeDependencies": {
     "@focus-reactive/graphql-content-layer": "../graphql-content-layer/"
