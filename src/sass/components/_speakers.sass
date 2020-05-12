@@ -56,7 +56,22 @@
 			padding: 20px
 			+xs
 				padding: 10px 10px
+.light
 
+	.speaker
+
+		&__desc
+			color: $themeColor2
+
+			+sm
+				color: $themeColor2
+
+		&__social-link
+			.icon
+				fill: $themeColor2
+			&:hover
+				.icon
+					fill: #000
 
 .speaker
 	position: relative
@@ -81,7 +96,51 @@
 		opacity: 0
 		transition: all ease 0.2s
 
+	&__tag
+		position: absolute
+		right: 10px
+		bottom: 0
+		background: var(--tagBG)
+		padding: 4px 5px
+		font-size: 14px
+		line-height: 1.8
+
+		+xs
+			right: 7px
+			font-size: 12px
+			padding: 2px 5px
+
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			width: 10px
+			height: 23px
+			background: red
+			background-color: var(--tagBG)
+
+			+xs
+				height: 18px
+				width: 7px
+
+
+		&:before
+			left: -10px
+			top: auto
+			bottom: 0
+
+			+xs
+				left: -7px
+
+		&:after
+			top: 0
+			right: -10px
+
+			+xs
+				right: -7px
+
 	&__photo
+		position: relative
 		width: 100%
 		margin-bottom: 22px
 		display: flex
@@ -95,6 +154,7 @@
 			width: 100%
 			height: auto
 			object-fit: cover
+			filter: grayscale(100%) contrast(110%)
 
 
 		&:hover
@@ -125,12 +185,10 @@
 			font-size: 14px
 			margin-bottom: 20px
 	&__desc
-		color: $themeColor2
 		font-size: 12px
 		line-height: 1.68
 		word-wrap: break-word
 		+sm
-			color: $themeColor2
 			font-size: 13px
 		+xs
 			font-size: 12px
@@ -152,10 +210,10 @@
 		.icon
 			transition: 0.3s
 			font-size: 18px
-			fill: $themeColor2
-		.no-touch &:hover
+			fill: #fff
+		&:hover
 			.icon
-				fill: #000
+				fill: $themeColor
 	&--mc
 		.speaker
 			&__photo

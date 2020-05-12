@@ -77,6 +77,9 @@
 {% macro avatarWithDetails(activity, item) %}
   <div class="speaker__photo">
     <img src="{{item.avatar}}" alt="{{item.name}}">
+    {% if item.label %}
+	<div class="speaker__tag" style="--tagBG: {{item.tagBG}}; color: {{item.color}};">{{item.label}}</div>
+	{% endif %}
     {% if (activity) %}
       <div class="activity-holder">
         <div class="slider">
