@@ -81,7 +81,51 @@
 		opacity: 0
 		transition: all ease 0.2s
 
+	&__tag
+		position: absolute
+		right: 10px
+		bottom: 0
+		background: var(--tagBG)
+		padding: 4px 5px
+		font-size: 14px
+		line-height: 1.8
+
+		+xs
+			right: 7px
+			font-size: 12px
+			padding: 2px 5px
+
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			width: 10px
+			height: 23px
+			background: red
+			background-color: var(--tagBG)
+
+			+xs
+				height: 18px
+				width: 7px
+
+
+		&:before
+			left: -10px
+			top: auto
+			bottom: 0
+
+			+xs
+				left: -7px
+
+		&:after
+			top: 0
+			right: -10px
+
+			+xs
+				right: -7px
+
 	&__photo
+		position: relative
 		width: 100%
 		margin-bottom: 22px
 		display: flex
