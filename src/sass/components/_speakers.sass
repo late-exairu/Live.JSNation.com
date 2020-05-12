@@ -56,7 +56,22 @@
 			padding: 20px
 			+xs
 				padding: 10px 10px
+.light
 
+	.speaker
+
+		&__desc
+			color: $themeColor2
+
+			+sm
+				color: $themeColor2
+
+		&__social-link
+			.icon
+				fill: $themeColor2
+			&:hover
+				.icon
+					fill: #000
 
 .speaker
 	position: relative
@@ -170,12 +185,10 @@
 			font-size: 14px
 			margin-bottom: 20px
 	&__desc
-		color: $themeColor2
 		font-size: 12px
 		line-height: 1.68
 		word-wrap: break-word
 		+sm
-			color: $themeColor2
 			font-size: 13px
 		+xs
 			font-size: 12px
@@ -197,10 +210,10 @@
 		.icon
 			transition: 0.3s
 			font-size: 18px
-			fill: $themeColor2
-		.no-touch &:hover
+			fill: #fff
+		&:hover
 			.icon
-				fill: #000
+				fill: $themeColor
 	&--mc
 		.speaker
 			&__photo
