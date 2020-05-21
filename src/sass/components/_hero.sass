@@ -13,7 +13,7 @@
 	//background-image: url(../img/hero-overlay.png)
 	background-color: #1e2220
 	z-index: 1
-	// pointer-events: none
+	pointer-events: none
 
 	&:after
 		content: ''
@@ -459,12 +459,13 @@
 	position: absolute
 	top: 0
 	bottom: 0
+	height: 100vh
 
 	&__ratio
 		display: block
-		height: 100%
 		width: auto
 		visibility: hidden
+		height: 100vh
 
 		img
 			height: 100%
@@ -512,10 +513,10 @@
 		&:after
 			content: ''
 			position: absolute
+			height: 100%
+			width: 100%
 			left: 0
 			top: 0
-			right: 0
-			bottom: 0
 			background: url(../img/screens-over.svg) center center no-repeat
 			background-size: cover
 			z-index: 2
