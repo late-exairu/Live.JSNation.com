@@ -2,7 +2,20 @@
     {% for item in extendeds.perks %}
     <div class="perks">
       <div class="perks__inner">
-        <div class="perks__img"><a href="{{item.registerLink}}"><img src="{{item.image.url}}" alt="{{item.title}}" /></a></div>
+      	{% if item.locationLink  %}
+        <div class="perks__video-wrap">
+        	<div class="perks__video">
+        		<iframe width="560" height="315" src="{{ item.locationLink }}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        	</div>
+        </div>
+        {% else %}
+        <div class="perks__img">
+        	<a href="{{item.registerLink}}">
+        		<img src="{{item.image.url}}" alt="{{item.title}}" />
+        	</a>
+        </div>
+        {% endif %}
+
         <div class="perks__content">
           <div class="perks__title">{{item.title | safe}}</div>
           <div class="perks__subtitle">{{item.subtitle | safe}}</div>
