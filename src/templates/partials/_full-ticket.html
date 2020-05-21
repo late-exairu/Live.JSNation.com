@@ -4,13 +4,23 @@
 
 		<div class="ticket-adv">
 			{% for item in pages[pageKey].pageSections.fullTicket %}
-			<div class="ticket-adv__item" style="background-image: url({{ item.bg }});">
-				<p class="ticket-adv__title">{{ item.title }}</p>
-				<div class="ticket-adv__img-wrap">
-					<img class="ticket-adv__img" src="{{ item.img }}">
+				{% if item.link %}
+				<a class="ticket-adv__item" href="{{ item.link }}" style="background-image: url({{ item.bg }});">
+					<p class="ticket-adv__title">{{ item.title }}</p>
+					<div class="ticket-adv__img-wrap">
+						<img class="ticket-adv__img" src="{{ item.img }}">
+					</div>
+					<p class="ticket-adv__desc">{{ item.desc }}</p>
+				</a>
+				{% else %}
+				<div class="ticket-adv__item" style="background-image: url({{ item.bg }});">
+					<p class="ticket-adv__title">{{ item.title }}</p>
+					<div class="ticket-adv__img-wrap">
+						<img class="ticket-adv__img" src="{{ item.img }}">
+					</div>
+					<p class="ticket-adv__desc">{{ item.desc }}</p>
 				</div>
-				<p class="ticket-adv__desc">{{ item.desc }}</p>
-			</div>
+				{% endif %}
 			{% endfor %}
 		</div>
 		
