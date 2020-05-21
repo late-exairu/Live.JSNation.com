@@ -11,7 +11,7 @@ const tagColors = {
     color: '#FFFFFF',
   },
   NodeJS: {
-    tagBG: '#7AB464',
+    tagBG: '#8cc84b',
     color: '#fff',
   },
   WebGL: {
@@ -28,14 +28,14 @@ const tagColors = {
   },
   GraphQL: {
     tagBG: '#f200fa',
-    color: '#400042',
+    color: '#fff',
   },
   GQL: {
     tagBG: '#198bb0',
     color: '#FFFFFF',
   },
   VueJS: {
-    tagBG: '#4EBA87',
+    tagBG: '#3fb984',
     color: '#fff',
   },
   Performance: {
@@ -43,17 +43,37 @@ const tagColors = {
     color: '#00410a',
   },
   TypeScript: {
-    tagBG: '#61DAFB',
-    color: '#030303',
+    tagBG: '#007acc',
+    color: '#fff',
   },
   Angular: {
     tagBG: '#dd0031',
     color: '#FFFFFF',
   },
+  AlpineJS: {
+    tagBG: '#8ac1ce',
+    color: '#fff',
+  },
+  React: {
+    tagBG: '#61dbfb',
+    color: '#004d61',
+  },
+  I18N: {
+    tagBG: '#866bba',
+    color: '#b9efff',
+  },
+  Career: {
+    tagBG: '#9c00ff',
+    color: '#fff',
+  },
+  Testing: {
+    tagBG: '#ffaa45',
+    color: '#fff',
+  },
   default: {
     tagBG: 'black',
     color: 'white',
-  },
+  }
 };
 
 const speakerAvatar = {
