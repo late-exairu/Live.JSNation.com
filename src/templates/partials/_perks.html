@@ -1,0 +1,14 @@
+
+    {% for item in extendeds.perks %}
+    <div class="perks">
+      <div class="perks__inner">
+        <div class="perks__img"><a href="{{item.registerLink}}"><img src="{{item.image.url}}" alt="{{item.title}}" /></a></div>
+        <div class="perks__content">
+          <div class="perks__title">{{item.title | safe}}</div>
+          <div class="perks__subtitle">{{item.subtitle | safe}}</div>
+          <div class="perks__description">{{item.description | safe}}</div>
+          <a class="perks__link" href="{{item.registerLink}}">learn more</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
