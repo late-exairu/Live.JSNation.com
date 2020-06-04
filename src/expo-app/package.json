@@ -1,0 +1,26 @@
+{
+  "name": "gitnation-expo-widget",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build index.jsx --out-dir ../../build/js/expo-app",
+    "watch": "parcel watch index.jsx --out-dir ../../build/js/expo-app",
+    "parcel": "parcel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
+}

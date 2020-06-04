@@ -1,6 +1,15 @@
 const tabLink = $('.js-tab-link');
 const tabClose = $('.js-tab-close');
 
+const initiateTemplate = (el) => {
+  const templateEl = el.querySelector('template');
+
+  if (templateEl) {
+    const templateContent = templateEl.content.cloneNode(true);
+    el.appendChild(templateContent);
+  }
+};
+
 tabLink.on('click', function(e) {
   if ($(this).hasClass('is-active')) {
     return;
@@ -17,9 +26,15 @@ tabLink.on('click', function(e) {
         $(this).removeClass('is-scroll');
       }, 2000);
     }
-    parent.find(`.js-tab[data-tab="${tabIndex}"]`).addClass('is-active');
+    const jsTabContainer = parent.find(`.js-tab[data-tab="${tabIndex}"]`);
+    jsTabContainer.addClass('is-active');
+
+    initiateTemplate(jsTabContainer.get(0));
   }
 });
+
+// initiate first active tab
+initiateTemplate(document.querySelector('.js-tab.is-active'));
 
 tabClose.on('click', function() {
   const parent = $(this).parents('.js-tabs-container');

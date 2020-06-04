@@ -12,6 +12,9 @@
 				{% endif %}
 			</div>
 			{% endfor %}
+      <div href="#" class="live-programm__tab js-tab-link {% if item.active %}is-active{% endif %}" data-tab="expo">
+        Expo
+      </div>
 		</div>
 	</div>
 
@@ -37,6 +40,12 @@
 			</div>
 		</div>
 		{% endfor %}
+    <div class="broadcast js-tab" data-tab="expo">
+      <template>
+        <div id="expo-app"></div>
+        <script src="/js/expo-app/index.js"></script>
+      </template>
+		</div>
 	</div>
 
 	<div class="container">
