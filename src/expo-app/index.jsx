@@ -12,7 +12,7 @@ import styled from 'styled-components';
 const partners = [
   {
     name: 'Mux',
-    description: 'Bestest video SaaS provider',
+    description: 'API for video streaming',
     logo: 'https://media.graphcms.com/1mzHE2TNS5uoBxP4eTdP',
   },
   {
