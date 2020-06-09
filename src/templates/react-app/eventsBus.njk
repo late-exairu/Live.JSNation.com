@@ -33,6 +33,9 @@ const eventsBus = {
       name: name || id,
       id
     });
+  },
+  clickEvent: function (payload) {
+    this.sendEvent('click', payload);
   }
 };
 window.eventsBus = eventsBus;  </script>
@@ -45,4 +48,8 @@ window.eventsBus = eventsBus;  </script>
   <script>
     eventsBus.mountEvent("{{ id }}", "{{ name }}")
   </script>
+{% endmacro %}
+
+{% macro openDialog(props) %}
+  'eventsBus.clickEvent({ name: "{{ props.name }}", link: "{{ props.link }}", isAuth: {{ true if props.isAuth else false }}, data: {{ props.data if props.data else {} | dump }} })'
 {% endmacro %}

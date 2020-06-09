@@ -72,6 +72,6 @@ gulp.task('nunjucks:watch', function() {
     ], ['nunjucks']);
 
     gulp.watch([
-        config.src.templates + '/**/_*.njk'
+        config.src.templates + '/**/*.njk'
     ], ['nunjucks']);
 });

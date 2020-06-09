@@ -28,5 +28,8 @@ const eventsBus = {
       id,
     });
   },
+  clickEvent: function (payload) {
+    this.sendEvent('click', payload);
+  },
 };
 window.eventsBus = eventsBus;
