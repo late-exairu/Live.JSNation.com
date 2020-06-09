@@ -58,6 +58,7 @@ function createConfig(env) {
         'animation.gsap': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
         'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
         '@focus-reactive/inline-edit': path.resolve('./', 'inline-edit'),
+        '@focus-reactive/react-app-level': path.resolve('./', 'react-app'),
       },
     },
     optimization :{
