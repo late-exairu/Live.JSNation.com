@@ -1,0 +1,6 @@
+{% macro mountPoint(id, name) %}
+  <div id="{{ id }}" />
+  <script>
+    eventsBus.mountEvent("{{ id }}", "{{ name }}")
+  </script>
+{% endmacro %}

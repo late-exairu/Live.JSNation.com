@@ -193,5 +193,16 @@ class App extends React.Component {
   }
 }
 
-var mountNode = document.getElementById('expo-app');
-ReactDOM.render(<App />, mountNode);
+const mountApp = (id) => {
+  const mountNode = document.getElementById(id);
+  ReactDOM.render(<App />, mountNode);
+};
+
+export const initExpoApp = (bus) => {
+  const onEvent = ({ type, payload }) => {
+    if (type === 'mount' && payload.name === 'expo-app') {
+      mountApp(payload.id);
+    }
+  };
+  bus.subscribe(onEvent);
+};

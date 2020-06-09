@@ -41,10 +41,7 @@
 		</div>
 		{% endfor %}
     <div class="broadcast js-tab" data-tab="expo">
-      <template>
-        <div id="expo-app"></div>
-        <script src="/js/expo-app/index.js"></script>
-      </template>
+      {{ eventsLayer.mountPoint('expo-app') }}
 		</div>
 	</div>
 
