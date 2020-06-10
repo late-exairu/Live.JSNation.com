@@ -6,6 +6,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import DialogPopup from './DialogPopup';
 import { getEventStatus } from './model';
 import NewTab from './NewTab';
+import TicketMessage from './TicketMessage';
 
 const eventNames = ['video-room'];
 
@@ -57,18 +58,31 @@ const useBusEvents = (bus) => {
 };
 
 const App = ({ bus }) => {
-  const { isOpen, close, type, content, status, isNow } = useBusEvents(bus);
-  console.log('App -> content', content);
+  const {
+    isOpen,
+    close,
+    type,
+    content,
+    status,
+    isNow,
+  } = useBusEvents(bus);
 
-  if (isNow) {
+  if (!content) {
+    return null;
+  }
+
+  const { isAuth } = content;
+  if (isNow && isAuth) {
     return <NewTab to={content.link} />;
   }
 
   return (
     <DialogOverlay isOpen={isOpen} onDismiss={close}>
       <GlobalStyle />
-      <DialogContent>
-        <DialogPopup type={type} content={content} status={status} />
+      <DialogContent aria-label="this activity is not available">
+        {isOpen ? (
+          <DialogPopup type={type} content={content} status={status} />
+        ) : null}
       </DialogContent>
     </DialogOverlay>
   );

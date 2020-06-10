@@ -118,6 +118,15 @@ export const convertEventTimeToISO = (date, time, z = 2) => {
   return iso;
 };
 
+export const convertEventTimeToLocal = (date, time, z = 2) => {
+  const iso = convertEventTimeToISO(date, time, z);
+  const local = DateTime.fromISO(iso);
+  return {
+    date: local.toFormat('dd MMM'),
+    time: local.toFormat('HH:mm'),
+  };
+};
+
 const iso2sec = (iso) => Math.floor(DateTime.fromISO(iso).toMillis() / 1000);
 
 export const createTrack = (isoTimeStart, k = 1) => {
@@ -159,6 +168,7 @@ export const createScheduleEvent = (isoStart, durationMM) => {
 
 export const lockCurrentTime = (time) => {
   lockedCurrentTime = time;
+  console.warn('CurrentTime is set to', lockedCurrentTime);
 };
 
 export const getCurrentLocalISO = () => {
@@ -174,7 +184,8 @@ const tmp = {
   convertEventTimeToISO,
   lockCurrentTime,
   getCurrentLocalISO,
-  lock1: () => lockCurrentTime('2020-06-18T17:30:00.163+02:00'),
+  lock1: () => lockCurrentTime('2020-06-18T17:30:00.000+02:00'),
+  lock2: () => lockCurrentTime('2020-06-19T17:30:00.000+02:00'),
 };
 
 window.tmp = tmp;
