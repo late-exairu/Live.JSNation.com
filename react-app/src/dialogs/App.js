@@ -4,6 +4,8 @@ import '@reach/dialog/styles.css';
 import styled, { createGlobalStyle } from 'styled-components';
 
 import DialogPopup from './DialogPopup';
+import { getEventStatus } from './model';
+import NewTab from './NewTab';
 
 const eventNames = ['video-room'];
 
@@ -21,14 +23,15 @@ const GlobalStyle = createGlobalStyle`
 const useBusEvents = (bus) => {
   const [isOpen, setOpen] = React.useState(false);
   const [type, setType] = React.useState(null);
+  const [content, setContent] = React.useState(null);
 
   const close = () => setOpen(false);
 
   const onEvent = ({ type, payload }) => {
-    console.log('onEvent -> payload', payload);
     if (type === 'click' && eventNames.includes(payload.name)) {
       setOpen(true);
       setType(payload.name);
+      setContent(payload);
     }
   };
 
@@ -40,25 +43,32 @@ const useBusEvents = (bus) => {
     return unsubscribe;
   }, []);
 
+  const status = content ? getEventStatus(content) : null;
+  const isNow = status && status.status === 'now';
+
   return {
     isOpen,
     type,
     close,
+    content,
+    status,
+    isNow,
   };
 };
 
 const App = ({ bus }) => {
-  const { isOpen, close, type } = useBusEvents(bus);
+  const { isOpen, close, type, content, status, isNow } = useBusEvents(bus);
+  console.log('App -> content', content);
 
-  // if (!open) {
-  //   return null;
-  // }
+  if (isNow) {
+    return <NewTab to={content.link} />;
+  }
 
   return (
     <DialogOverlay isOpen={isOpen} onDismiss={close}>
       <GlobalStyle />
       <DialogContent>
-        <DialogPopup />
+        <DialogPopup type={type} content={content} status={status} />
       </DialogContent>
     </DialogOverlay>
   );

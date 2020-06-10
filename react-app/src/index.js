@@ -1,3 +1,4 @@
+import { getCurrentTime, setCurrentUTCTimeAndZone } from './time-provider';
 import { initExpoApp } from './expo-app';
 import { initDialogs } from './dialogs';
 

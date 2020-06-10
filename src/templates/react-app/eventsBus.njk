@@ -7,7 +7,6 @@ const eventsBus = {
   subscribers: [],
   log: [],
   subscribe: function (cb, mutePrevious) {
-    console.log("new subscriber:", cb)
     this.subscribers.push(cb);
 
     if (mutePrevious) {
@@ -27,7 +26,6 @@ const eventsBus = {
     };
     this.subscribers.forEach(cb => cb(message));
     this.log.push(message);
-    console.log('event was sent', message);
   },
   mountEvent: function (id, name) {
     this.sendEvent('mount', {
