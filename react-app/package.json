@@ -7,6 +7,7 @@
     "build:mixins": "babel ./templates -x .js -d ./temp && sh scripts/createMixins.sh"
   },
   "dependencies": {
+    "@reach/dialog": "^0.10.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",

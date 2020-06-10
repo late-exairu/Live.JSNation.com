@@ -15,7 +15,7 @@
   </head>
   <body>
     {{eventsLayer.initEventsLayer(pageKey)}}
-
+    {{eventsLayer.mountPoint('dialog-popup')}}
     <!-- BEGIN content -->
     <div class="out">
       {% block content %}{% endblock %}

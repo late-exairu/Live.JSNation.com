@@ -43,6 +43,7 @@
     "babel-runtime": "^5.0.0",
     "browser-sync": "^2.26.7",
     "chalk": "^3.0.0",
+    "css-loader": "^3.5.3",
     "css-mqpacker": "^6.0.2",
     "dayjs": "^1.8.26",
     "del": "^3.0.0",
@@ -95,6 +96,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "@reach/dialog": "^0.10.3",
     "gulp-hash": "^4.2.2",
     "gulp-hash-references": "^3.0.1",
     "js-yaml": "^3.12.1",

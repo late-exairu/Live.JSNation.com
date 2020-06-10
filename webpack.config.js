@@ -96,6 +96,10 @@ function createConfig(env) {
           },
         },
         {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
           test: /\.js[x]?$/,
           use: {
             loader: 'babel-loader',
