@@ -6,6 +6,7 @@
 const eventsBus = {
   subscribers: [],
   log: [],
+  content: {},
   subscribe: function (cb, mutePrevious) {
     this.subscribers.push(cb);
 
@@ -35,6 +36,15 @@ const eventsBus = {
   },
   clickEvent: function (payload) {
     this.sendEvent('click', payload);
+  },
+  pushContent: function (data) {
+    this.content = {
+      ...this.content,
+      ...data,
+    }
+  },
+  getContent: function () {
+    return this.content;
   }
 };
 window.eventsBus = eventsBus;  </script>
@@ -54,3 +64,10 @@ window.eventsBus = eventsBus;  </script>
   'eventsBus.clickEvent({ name: "{{ props.name }}", link: "{{ props.link }}", isAuth: {{ true if props.isAuth else false }}, data: {{ props.data if props.data else {} | dump }} })'
 {% endmacro %}
 
+{% macro sendContent(name, data) %}
+  <script>
+    eventsBus.pushContent({
+      {{ name }}: {{ data | dump | safe }}
+    })
+  </script>
+{% endmacro %}

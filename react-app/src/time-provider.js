@@ -129,6 +129,25 @@ export const convertEventTimeToLocal = (date, time, z = 2) => {
 
 const iso2sec = (iso) => Math.floor(DateTime.fromISO(iso).toMillis() / 1000);
 
+export const createTimeRange = (isoStart, isoEnd, difMM = 5) => {
+  const range = [];
+  const difSS = difMM * 60;
+  const secStart = iso2sec(isoStart);
+  const secEnd = iso2sec(isoEnd);
+  let i = secStart;
+  while (i <= secEnd) {
+    const tm = DateTime.fromSeconds(i);
+    const time = {
+      date: tm.toFormat('dd MMM'),
+      time: tm.toFormat('HH:mm'),
+    };
+    range.push(time);
+    i = i + difSS;
+  }
+
+  return range;
+};
+
 export const createTrack = (isoTimeStart, k = 1) => {
   const secStart = iso2sec(isoTimeStart);
   return (isoTime) => {
