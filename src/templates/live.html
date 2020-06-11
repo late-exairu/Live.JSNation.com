@@ -23,7 +23,7 @@ fakeLinks: true
 			{% include "partials/_time-track.html" %}
 		{% endif %}
 
-    {# {{eventsLayer.mountPoint('time-track-mount')}} #}
+    {{eventsLayer.mountPoint('time-track-mount')}}
     {{eventsLayer.sendContent('scheduleExtends', customContent.scheduleExtends )}}
     {{eventsLayer.sendContent('customTracks', customContent.tracks )}}
     {{eventsLayer.sendContent('schedule', schedule )}}

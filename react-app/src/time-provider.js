@@ -115,8 +115,14 @@ export const convertEventTimeToISO = (date, time, z = 2) => {
     `${date} ${time} +${z}`,
     'MMMM dd HH:mm Z'
   ).toISO();
+  if (!iso) {
+    console.log('convertEventTimeToISO -> !!!\n', date, time, iso);
+  }
   return iso;
 };
+
+export const iso2sec = (iso) =>
+  Math.floor(DateTime.fromISO(iso).toMillis() / 1000);
 
 export const convertEventTimeToLocal = (date, time, z = 2) => {
   const iso = convertEventTimeToISO(date, time, z);
@@ -124,10 +130,9 @@ export const convertEventTimeToLocal = (date, time, z = 2) => {
   return {
     date: local.toFormat('dd MMM'),
     time: local.toFormat('HH:mm'),
+    sec: iso2sec(iso),
   };
 };
-
-const iso2sec = (iso) => Math.floor(DateTime.fromISO(iso).toMillis() / 1000);
 
 export const createTimeRange = (isoStart, isoEnd, difMM = 5) => {
   const range = [];

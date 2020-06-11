@@ -22,7 +22,6 @@ export const getEventStatus = (payload) => {
 };
 
 export const getMessage = (content, status) => {
-  console.log('getMessage -> content', content.data);
   if (status.status === 'before') {
     try {
       const { data } = content;
@@ -34,7 +33,6 @@ export const getMessage = (content, status) => {
   }
 
   if (status.status === 'after') {
-    console.log('getMessage -> status', status);
     const { deltaMM } = status;
     if (deltaMM < 12 * 60) {
       return 'Sorry. This room is closed';

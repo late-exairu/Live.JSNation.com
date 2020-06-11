@@ -8,11 +8,14 @@ import { getEventStatus } from './model';
 import NewTab from './NewTab';
 import TicketMessage from './TicketMessage';
 
-const eventNames = ['video-room'];
+const eventNames = ['video-room', 'qa-room'];
 
 const GlobalStyle = createGlobalStyle`
   [data-reach-dialog-overlay] {
-    background-color: hsla(0, 0%, 0%, 0.85);
+    background-color: ${({ isOpen }) =>
+      isOpen ? 'hsla(0, 0%, 0%, 0.85)' : 'hsla(0, 0%, 0%, 0.4)'};
+    transition: background-color 500ms ease;
+    z-index: 10;
   }
 
   [data-reach-dialog-content] {
@@ -58,14 +61,7 @@ const useBusEvents = (bus) => {
 };
 
 const App = ({ bus }) => {
-  const {
-    isOpen,
-    close,
-    type,
-    content,
-    status,
-    isNow,
-  } = useBusEvents(bus);
+  const { isOpen, close, type, content, status, isNow } = useBusEvents(bus);
 
   if (!content) {
     return null;
@@ -78,7 +74,7 @@ const App = ({ bus }) => {
 
   return (
     <DialogOverlay isOpen={isOpen} onDismiss={close}>
-      <GlobalStyle />
+      <GlobalStyle isOpen={isOpen} />
       <DialogContent aria-label="this activity is not available">
         {isOpen ? (
           <DialogPopup type={type} content={content} status={status} />
