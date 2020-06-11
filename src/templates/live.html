@@ -27,6 +27,7 @@ fakeLinks: true
     {{eventsLayer.sendContent('scheduleExtends', customContent.scheduleExtends )}}
     {{eventsLayer.sendContent('customTracks', customContent.tracks )}}
     {{eventsLayer.sendContent('schedule', schedule )}}
+    {{eventsLayer.sendContent('isAuth', not fakeLinks )}}
 
 		{% if pages[pageKey].pageSections.sponsorsOffers %}
 			{% include "partials/_sponsors-offers.html" %}

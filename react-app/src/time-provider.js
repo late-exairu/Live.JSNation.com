@@ -192,7 +192,7 @@ export const createScheduleEvent = (isoStart, durationMM) => {
 
 export const lockCurrentTime = (time) => {
   lockedCurrentTime = time;
-  console.warn('CurrentTime is set to', lockedCurrentTime);
+  console.warn(`tmp.lockCurrentTime('${lockedCurrentTime}')`);
 };
 
 export const getCurrentLocalISO = () => {

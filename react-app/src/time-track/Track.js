@@ -12,6 +12,15 @@ const slackIcon = (
   ></svg>
 );
 
+const camIcon = (
+  <svg
+    className="icon icon-cam"
+    dangerouslySetInnerHTML={{
+      __html: '<use xlink:href="img/sprite.svg#icon-cam"></use>',
+    }}
+  ></svg>
+);
+
 const EventContainer = styled.div`
   position: absolute;
   left: ${({ position }) => position}px;
@@ -110,15 +119,42 @@ const Talk = ({ talk }) => {
 };
 
 const QARoom = ({ talk, onClick }) => {
-  const { qaLink } = talk;
   return (
     <a
-      // href={qaLink}
       onClick={onClick}
       className="time-track__link js-time"
       style={{ '--bgColor': talk.bgColor, width: '100%' }}
     >
       Q&A {slackIcon}
+    </a>
+  );
+};
+
+const SpeakerRoom = ({ talk, onClick }) => {
+  const { pic, speaker, title } = talk;
+  return (
+    <a
+      onClick={onClick}
+      className="time-track__link room js-time"
+      style={{ '--bgColor': talk.bgColor, width: '100%' }}
+    >
+      {ePic(pic)}
+      {eTitle(speaker, title)}
+    </a>
+  );
+};
+
+const DiscussionRoom = ({ talk, onClick }) => {
+  const { pic, speaker, title } = talk;
+  return (
+    <a
+      onClick={onClick}
+      className="time-track__link discussion js-time"
+      style={{ '--bgColor': talk.bgColor, width: '100%' }}
+    >
+      {ePic(pic)}
+      {eTitle(speaker, title)}
+      {camIcon}
     </a>
   );
 };
@@ -135,6 +171,22 @@ const TrackEvent = ({ event, calcPosition, onClick }) => {
     return (
       <EventContainer position={position} width={width}>
         <QARoom talk={event} onClick={handleClick} />
+      </EventContainer>
+    );
+  }
+
+  if (event.speakerRoomLink) {
+    return (
+      <EventContainer position={position} width={width}>
+        <SpeakerRoom talk={event} onClick={handleClick} />
+      </EventContainer>
+    );
+  }
+
+  if (event.discussionRoomLink) {
+    return (
+      <EventContainer position={position} width={width}>
+        <DiscussionRoom talk={event} onClick={handleClick} />
       </EventContainer>
     );
   }

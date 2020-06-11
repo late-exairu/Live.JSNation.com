@@ -8,7 +8,13 @@ import { getEventStatus } from './model';
 import NewTab from './NewTab';
 import TicketMessage from './TicketMessage';
 
-const eventNames = ['video-room', 'qa-room'];
+const eventNames = [
+  'video-room',
+  'qa-room',
+  'speaker-room',
+  'discussion-room',
+  'any-room',
+];
 
 const GlobalStyle = createGlobalStyle`
   [data-reach-dialog-overlay] {

@@ -7,7 +7,7 @@ import { createTimeTicks, calcPositionFromTime } from './model';
 
 const App = ({ bus }) => {
   const content = bus.getContent();
-  const { customTracks, schedule, scheduleExtends } = content;
+  const { customTracks, schedule, scheduleExtends, isAuth } = content;
   const startTime = { date: 'June 18', time: '15:00' };
   const endTime = { date: 'June 19', time: '24:00' };
   const timeTicks = createTimeTicks(startTime, endTime);
@@ -15,25 +15,15 @@ const App = ({ bus }) => {
   const trackWidth = calcPosition(endTime);
 
   const handleClick = (eventContent) => {
-    console.log('handleClick -> eventContent', eventContent);
-    const payload1 = {
-      title: 'Q&A with MC and Gleb Bahmutov',
-      track: 'June 18',
-      time: '16:35',
-      duration: '15',
-      qaLink: 'https://discord.gg/k7WtQcu',
-      bgColor: '#ccff00',
-      id: 'ck9ehd26r3dtf0b84tqsc4f0s',
-      contentType: '2e92d35e0ac0421baf779aef56eec40d',
-    };
     const payload = {
       data: {
         ...eventContent,
         /* TODO: switch to real date */
-        date: eventContent.track,
+        date: eventContent.date || eventContent.track,
       },
-      isAuth: true,
-      name: 'qa-room',
+      isAuth,
+      name: 'any-room',
+      link: eventContent.qaLink || eventContent.speakerRoomLink,
     };
     bus.clickEvent(payload);
   };
