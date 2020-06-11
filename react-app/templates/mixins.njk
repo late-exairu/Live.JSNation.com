@@ -1,0 +1,12 @@
+{% macro mountPoint(id, name) %}
+  <div id="{{ id }}" >
+    <script>
+      eventsBus.mountEvent("{{ id }}", "{{ name }}")
+    </script>
+  </div>
+{% endmacro %}
+
+{% macro openDialog(props) %}
+  'eventsBus.clickEvent({ name: "{{ props.name }}", link: "{{ props.link }}", isAuth: {{ true if props.isAuth else false }}, data: {{ props.data if props.data else {} | dump }} })'
+{% endmacro %}
+
