@@ -2,7 +2,7 @@
   "name": "react-summit",
   "version": "0.2.0",
   "scripts": {
-    "build": "gulp build --production && ls -laR ./build",
+    "build": "gulp build --production",
     "start": "gulp",
     "test:build": "gulp test",
     "test:build-update": "gulp test -u",
@@ -13,7 +13,8 @@
     "test:smoke": "jest __tests__/smoke.test.js",
     "storybook": "start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
-    "deploy:storybook": "storybook-to-ghpages",
+    "deploy:storybook": "echo 'skip storybook'",
+    "deploy:storybook_": "storybook-to-ghpages",
     "prestart": "relative-deps",
     "dev:content": "yarn prestart && yarn storybook"
   },
