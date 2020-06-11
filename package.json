@@ -2,8 +2,7 @@
   "name": "react-summit",
   "version": "0.2.0",
   "scripts": {
-    "build": "gulp build --production && ls -laR ./build && yarn run build-expo-app",
-    "build-expo-app": "cd src/expo-app && yarn --production && yarn build",
+    "build": "gulp build --production && ls -laR ./build",
     "start": "gulp",
     "test:build": "gulp test",
     "test:build-update": "gulp test -u",
