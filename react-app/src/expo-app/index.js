@@ -174,8 +174,8 @@ class App extends React.Component {
               <PartnerPage />
             </Route>
             <Route path="/">
-              {partners.map(({ name, description, logo }) => (
-                <Link to={`/booth/${name}`}>
+              {partners.map(({ name, description, logo }, i) => (
+                <Link to={`/booth/${name}`} key={i}>
                   <div>
                     <div>
                       <img src={logo} width={200} />

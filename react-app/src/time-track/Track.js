@@ -69,8 +69,8 @@ const iSpeaker = (name, place, title, text) => (
 const iLt = (title, lightningTalks = []) => (
   <React.Fragment>
     <p className="track-tooltip__speaker">{title}</p>
-    {lightningTalks.map((lt) => (
-      <div className="track-tooltip__sec">
+    {lightningTalks.map((lt, i) => (
+      <div className="track-tooltip__sec" key={i}>
         <p className="track-tooltip__title">
           {lt.title} - {lt.name}
         </p>
@@ -90,18 +90,7 @@ const Tooltip = ({ children, on }) =>
   on ? <div className="track-tooltip">{children}</div> : null;
 
 const Talk = ({ talk }) => {
-  const {
-    pic,
-    speaker,
-    title,
-    lightningTalks,
-    qaLink,
-    speakerRoomLink,
-    discussionRoomLink,
-    text,
-    name,
-    place,
-  } = talk;
+  const { pic, speaker, title, lightningTalks, text, name, place } = talk;
   return (
     <div
       className="time-track__item js-time"
@@ -211,8 +200,9 @@ function Track({ track, calcPosition, onClick }) {
       }}
     >
       <TrackContent adjust={26}>
-        {list.map((evt) => (
+        {list.map((evt, i) => (
           <TrackEvent
+            key={i}
             event={evt}
             calcPosition={calcPosition}
             onClick={onClick}

@@ -5,13 +5,16 @@ const Aside = ({ schedule, customTracks }) => {
   return (
     <div className="time-track__aside">
       {schedule.map((sch) => (
-        <div className="time-track__track">
+        <div className="time-track__track" key={sch.title}>
           <div className="time-track__track-title">{sch.title}</div>
         </div>
       ))}
 
-      {customTracks.map((tr) => (
-        <div className={cn('time-track__track', { odd: tr.odd })}>
+      {customTracks.map((tr, ind) => (
+        <div
+          className={cn('time-track__track', { odd: tr.odd })}
+          key={`${tr.title}-${ind}`}
+        >
           {tr.notitle ? null : (
             <div className="time-track__track-title">{tr.title}</div>
           )}

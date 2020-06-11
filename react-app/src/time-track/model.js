@@ -20,8 +20,8 @@ export const calcPositionFromTime = (startEvent, k = 1) => {
   const isoStart = convertEventTimeToISO(startEvent.date, startEvent.time);
   const secStart = iso2sec(isoStart);
   return (event) => {
-    const { date, time, track } = event;
-    const local = convertEventTimeToLocal(date || track, time);
+    const { date, time, track, z } = event;
+    const local = convertEventTimeToLocal(date || track, time, z);
     const sec = local.sec;
     const dist = ((sec - secStart) * pxPerMinute * k) / 60;
     return dist;

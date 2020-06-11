@@ -153,6 +153,35 @@ export const createTimeRange = (isoStart, isoEnd, difMM = 5) => {
   return range;
 };
 
+export const generateTimeEvents = ({ isoStart, isoEnd, cb, difSS = 10 }) => {
+  const secStart = iso2sec(isoStart);
+  const secEnd = iso2sec(isoEnd);
+
+  const checkRange = (sec) => {
+    if (!isoStart || !isoEnd) {
+      return true;
+    }
+    return secStart <= sec && sec <= secEnd;
+  };
+
+  const invokeCb = () => {
+    const currentIso = getCurrentLocalISO();
+    const currentSec = iso2sec(currentIso);
+    if (!checkRange(currentSec)) {
+      return;
+    }
+    const tm = DateTime.fromISO(currentIso);
+    const time = {
+      date: tm.toFormat('MMMM dd'),
+      time: tm.toFormat('HH:mm'),
+      z: parseInt(tm.toFormat('Z'), 10),
+    };
+    cb(time);
+  };
+  invokeCb();
+  setInterval(invokeCb, difSS * 1000);
+};
+
 export const createTrack = (isoTimeStart, k = 1) => {
   const secStart = iso2sec(isoTimeStart);
   return (isoTime) => {

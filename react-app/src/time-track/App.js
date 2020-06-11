@@ -4,6 +4,7 @@ import Aside from './Aside';
 import TracksContent from './TracksContent';
 import Track from './Track';
 import { createTimeTicks, calcPositionFromTime } from './model';
+import { mergeSchedule } from './magic';
 
 const App = ({ bus }) => {
   const content = bus.getContent();
@@ -13,6 +14,7 @@ const App = ({ bus }) => {
   const timeTicks = createTimeTicks(startTime, endTime);
   const calcPosition = calcPositionFromTime(startTime);
   const trackWidth = calcPosition(endTime);
+  const mSchedule = mergeSchedule(schedule);
 
   const handleClick = (eventContent) => {
     const payload = {
@@ -30,9 +32,9 @@ const App = ({ bus }) => {
 
   return (
     <Container>
-      <Aside schedule={schedule} customTracks={customTracks} />
-      <TracksContent timeTicks={timeTicks} trackWidth={trackWidth}>
-        {schedule.map((sch) => (
+      <Aside schedule={mSchedule} customTracks={customTracks} />
+      <TracksContent timeTicks={timeTicks} trackWidth={trackWidth} calcPosition={calcPosition}>
+        {mSchedule.map((sch) => (
           <Track
             track={sch}
             calcPosition={calcPosition}
