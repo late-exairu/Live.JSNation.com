@@ -21,6 +21,10 @@ sponsorsDescription: true
 			{% include "partials/_time-track.html" %}
 		{% endif %}
 
+		{% if pages[pageKey].pageSections.sponsorsOffers %}
+			{% include "partials/_sponsors-offers.html" %}
+		{% endif %}
+
 		<div class="light">
 			{% if pages[pageKey].pageSections.speakers %}
 				{% include "partials/_speakers.html" %}

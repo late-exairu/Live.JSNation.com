@@ -63,8 +63,8 @@
 		width: auto
 		height: auto
 		z-index: -1
-		background: url(../img/screens-done-op.svg) center center no-repeat
 		background-size: cover
+		background: #151816
 
 	&__inner
 		width: 1566px
@@ -250,9 +250,6 @@
 
 		.hero
 			&__bg
-				z-index: -1
-				background: url(../img/screens-done-op.svg) center top no-repeat
-				background-size: cover
 
 			&__inner
 				position: relative
@@ -459,17 +456,27 @@
 	position: absolute
 	top: 0
 	bottom: 0
-	height: 100vh
+	min-width: 120%
+	min-height: 100vh
+	+sm
+		min-width: 200%
+
 
 	&__ratio
+		position: relative
 		display: block
+		height: 100%
+		min-height: 100vh
 		width: auto
 		visibility: hidden
-		height: 100vh
 
 		img
+			display: block
+			flex: 1 1 auto
 			height: 100%
 			width: auto
+			overflow: hidden
+
 
 .screens
 	position: absolute
@@ -496,6 +503,12 @@
 			.screens__img
 				opacity: 1
 
+			.screens__screens-star,
+			.screens__screens-dots,
+			.screens__screens-controls
+				fill: #2c2c29
+
+
 		// &:before
 			content: ''
 			position: absolute
@@ -510,7 +523,7 @@
 			border-radius: 10px
 
 
-		&:after
+		// &:after
 			content: ''
 			position: absolute
 			height: 100%
@@ -540,8 +553,6 @@
 			width: 50%
 			fill: #2c302d
 
-			&.face_4
-
 	&__img
 		width: 100%
 		height: 100%
@@ -551,3 +562,30 @@
 		z-index: 1
 		transition: opacity ease 0.2s
 		border-radius: 10px
+
+	&__screens-star
+		position: absolute
+		left: 20px
+		top: 16px
+		z-index: 2
+		width: 30px
+		height: 27px
+		fill: #2C302D
+
+	&__screens-dots
+		position: absolute
+		right: 20px
+		top: 15px
+		z-index: 2
+		width: 7px
+		height: 30px
+		fill: #2C302D
+
+	&__screens-controls
+		position: absolute
+		left: 20px
+		bottom: 16px
+		z-index: 2
+		width: 64px
+		height: 28px
+		fill: #2C302D
