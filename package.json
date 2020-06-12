@@ -96,6 +96,8 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "@focus-reactive/inline-edit": "^1.0.0",
+    "@focus-reactive/react-app-layer": "^1.0.0",
     "@reach/dialog": "^0.10.3",
     "classnames": "^2.2.6",
     "gulp-hash": "^4.2.2",
