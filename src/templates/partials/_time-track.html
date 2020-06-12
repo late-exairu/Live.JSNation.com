@@ -5,16 +5,15 @@
 			<div href="#" class="live-programm__tab js-tab-link {% if item.active %}is-active{% endif %}" data-tab="{{loop.index}}">
 				{{item.title}}
 
-				{% if fakeLinks %}
-					<a href="slack-channel-link" class="live-programm__tab-link" data-fancybox data-src="#popup-ticket">{{mixins.icon('sl')}} Slack<span> channel</span></a>
-				{% else %}
-					<a href="{{item.slackLink}}" class="live-programm__tab-link"  target="blank_">{{mixins.icon('sl')}} Slack<span> channel</span></a>
+        {% if item.slackLink %}
+          {% if fakeLinks %}
+            <a href="slack-channel-link" class="live-programm__tab-link" data-fancybox data-src="#popup-ticket">{{mixins.icon('sl')}} Slack<span> channel</span></a>
+          {% else %}
+            <a href="{{item.slackLink}}" class="live-programm__tab-link"  target="blank_">{{mixins.icon('sl')}} Slack<span> channel</span></a>
+          {% endif %}
 				{% endif %}
 			</div>
 			{% endfor %}
-      <div href="#" class="live-programm__tab js-tab-link {% if item.active %}is-active{% endif %}" data-tab="expo">
-        Expo
-      </div>
 		</div>
 	</div>
 
@@ -22,27 +21,33 @@
 		{% for item in pages[pageKey].pageSections.scheduleExtends %}
 		<div class="broadcast js-tab {% if item.active %}is-active{% endif %}" data-tab="{{loop.index}}">
 			<div class="broadcast__content">
-				{% if fakeLinks %}
-          <p class='broadcats-text'>
-            <a href="liveauth" data-fancybox data-src="#popup-ticket">{{ item.notification }}</a>
-          </p>
+
+        {% if item.mountPoint %}
+          {{ eventsLayer.mountPoint(item.mountPoint) }}
+        {% endif %}
+
+        {% if fakeLinks %}
+          {% if item.notification %}
+            <p class='broadcats-text'>
+              <a href="liveauth" data-fancybox data-src="#popup-ticket">{{ item.notification }}</a>
+            </p>
+          {% endif %}
 				{% else %}
-          <iframe
-            src="{{ item.broadcastUrlAuth }}"
-            width="640"
-            height="360"
-            frameborder="0"
-            allow="fullscreen"
-            allowfullscreen
-          >
+          {% if item.broadcastUrlAuth %}
+            <iframe
+              src="{{ item.broadcastUrlAuth }}"
+              width="640"
+              height="360"
+              frameborder="0"
+              allow="fullscreen"
+              allowfullscreen
+            >
           </iframe>
+          {% endif %}
 				{% endif %}
 			</div>
 		</div>
 		{% endfor %}
-    <div class="broadcast js-tab" data-tab="expo">
-      {{ eventsLayer.mountPoint('expo-app') }}
-		</div>
 	</div>
 
 	{{eventsLayer.mountPoint('time-track-mount')}}
