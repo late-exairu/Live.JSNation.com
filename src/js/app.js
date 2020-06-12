@@ -1,6 +1,6 @@
 import highlightContent from '@focus-reactive/inline-edit';
 import { contentTypeMap } from '@focus-reactive/graphql-content-layer/dist/content-type-map';
-import reactApp from '@focus-reactive/react-app-level';
+import reactApp from '@focus-reactive/react-app-layer';
 
 import './components/tabs';
 import './components/header';
@@ -43,16 +43,5 @@ fancypop();
 countdown();
 
 highlightContent({ contentTypeMap });
-
-window.selectGeneralTrack = () => document.querySelector('.schedule__tab-link[data-tab="1"]').click();
-window.selectNativeTrack = () => document.querySelector('.schedule__tab-link[data-tab="2"]').click();
-
-if (location.hash === '#alt-track') {
-  try {
-    document.querySelector('.live-programm__tab.js-tab-link[data-tab="2"]').click();
-  } catch (err) {
-
-  }
-}
 
 $(reactApp);

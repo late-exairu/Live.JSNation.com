@@ -75,8 +75,6 @@ function createConfig(env) {
           'node_modules',
           'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'
         ),
-        '@focus-reactive/inline-edit': path.resolve('./', 'inline-edit'),
-        '@focus-reactive/react-app-level': path.resolve('./', 'react-app'),
       },
     },
     optimization: {

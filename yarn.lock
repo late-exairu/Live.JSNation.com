@@ -1103,10 +1103,10 @@
   resolved "https://registry.yarnpkg.com/@fancyapps/fancybox/-/fancybox-3.5.7.tgz#12f8734663ec6eae7f9236b92ca236e6e07fdfd5"
   integrity sha512-rcEtu8t+WnmqIDV/Wfm1yvy/nDdwc7YV25j9HLxGC2/WOsUhk9rcWg2nB8g1BrjRt9zaoADdjHTU6ILYTJzBBg==
 
-"@focus-reactive/graphql-content-layer@2.1.3":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@focus-reactive/graphql-content-layer/-/graphql-content-layer-2.1.3.tgz#295c4fa9ed803554f33e9e6adc59ee025b74618f"
-  integrity sha512-1c1FAuvyivF9N4mXIyfvf2zQVpnJp8XOqbQwK4WFyZ3Y8oC4t0S+xd8uHJqvh54nZ3a/jJkVDUg4RghZX0qR7g==
+"@focus-reactive/graphql-content-layer@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@focus-reactive/graphql-content-layer/-/graphql-content-layer-2.2.0.tgz#c0224da7e07cf104d2cc8b0ec469e9f946382712"
+  integrity sha512-D85M8tuRMfhXFWhBo7KABwVde3Gy3s120x893lGF26cPOH/VUKzpUax3CzN9DMHK4F1maYmdvwgin76rC7MUEQ==
   dependencies:
     "@focus-reactive/storybook-addon-graphcms" "^1.3.0"
     "@react-theming/storybook-addon" "^0.2.1"
@@ -1125,6 +1125,23 @@
     remark-parse "^7.0.2"
     unified "^8.4.2"
     url-slug "^2.2.0"
+
+"@focus-reactive/inline-edit@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@focus-reactive/inline-edit/-/inline-edit-1.0.0.tgz#2550edbb5aed76a2c409641b6ed0243f7b3bf99e"
+  integrity sha512-ozlxFRwlZN7CR133znUAJsv1jX/QOywlQ0olv+7HlL/ZW6ibo7ZdnNAhOvkvSt5aamr/Pu3H4yzB4PprGl+iwQ==
+
+"@focus-reactive/react-app-layer@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@focus-reactive/react-app-layer/-/react-app-layer-1.0.0.tgz#b1555dad2a3f1a877b51b26e89406a02a591631b"
+  integrity sha512-hZG6Rlknb+wjhiaKvlaImMLVlPrlLWGbUVhso7EcggFBSmZKWW0t4ZNPw3HbbTxsIa6y5T4X74zQBTJo9pFTiw==
+  dependencies:
+    "@reach/dialog" "^0.10.3"
+    dayjs "^1.8.26"
+    react "^16.13.1"
+    react-dom "^16.13.1"
+    react-router-dom "^5.2.0"
+    styled-components "^5.1.1"
 
 "@focus-reactive/storybook-addon-graphcms@^1.3.0":
   version "1.3.0"

@@ -1,15 +1,3 @@
----
-
-pageKey: main
-
-headerBtn: true
-
-sponsorsDescription: true
-
-fakeLinks: true
-
----
-
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
@@ -22,11 +10,6 @@ fakeLinks: true
 		{% if pages[pageKey].pageSections.timeTrack %}
 			{% include "partials/_time-track.html" %}
 		{% endif %}
-
-    {# {{eventsLayer.mountPoint('time-track-mount')}} #}
-    {{eventsLayer.sendContent('scheduleExtends', customContent.scheduleExtends )}}
-    {{eventsLayer.sendContent('customTracks', customContent.tracks )}}
-    {{eventsLayer.sendContent('schedule', schedule )}}
 
 		{% if pages[pageKey].pageSections.sponsorsOffers %}
 			{% include "partials/_sponsors-offers.html" %}
