@@ -1,6 +1,6 @@
 import highlightContent from '@focus-reactive/inline-edit';
 import { contentTypeMap } from '@focus-reactive/graphql-content-layer/dist/content-type-map';
-import reactApp from '@focus-reactive/react-app-level';
+import reactApp from '@focus-reactive/react-app-layer';
 
 import './components/tabs';
 import './components/header';
