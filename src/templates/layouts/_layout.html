@@ -16,6 +16,11 @@
   <body>
     {{eventsLayer.initEventsLayer(pageKey)}}
     {{eventsLayer.mountPoint('dialog-popup')}}
+    {{eventsLayer.sendContent('scheduleExtends', customContent.scheduleExtends )}}
+    {{eventsLayer.sendContent('customTracks', customContent.tracks )}}
+    {{eventsLayer.sendContent('schedule', schedule )}}
+    {{eventsLayer.sendContent('isAuth', not fakeLinks )}}
+
     <!-- BEGIN content -->
     <div class="out">
       {% block content %}{% endblock %}
