@@ -8,7 +8,7 @@ import { countdown } from './components/countdown';
 import svg4everybody from 'svg4everybody';
 import msieversion from './components/detectIE';
 import slider from './components/_slider';
-// import fancypop from './components/_fancybox';
+import fancypop from './components/_fancybox';
 import './components/_faq';
 import './components/_timeTrack';
 import './components/_randomRoom';
@@ -39,22 +39,9 @@ if ($('.js-slider')) {
   slider();
 }
 
-// fancypop();
+fancypop();
 countdown();
 
 highlightContent({ contentTypeMap });
-
-/** TODO: make universal */
-
-// window.selectGeneralTrack = () => document.querySelector('.schedule__tab-link[data-tab="1"]').click();
-// window.selectNativeTrack = () => document.querySelector('.schedule__tab-link[data-tab="2"]').click();
-
-// if (location.hash === '#alt-track') {
-//   try {
-//     document.querySelector('.live-programm__tab.js-tab-link[data-tab="2"]').click();
-//   } catch (err) {
-
-//   }
-// }
 
 $(reactApp);

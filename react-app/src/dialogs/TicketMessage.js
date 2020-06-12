@@ -31,7 +31,7 @@ const TicketMessage = () => {
             Use your access code from the ticket to unlock all features
           </p>
           <form
-            action="/liveauth"
+            action="/watch-full-access"
             method="get"
             className="c-form"
             target="_blank"
