@@ -8,6 +8,17 @@ const timeSettings = {
   currentTimezone: getClientTimezoneOffset(),
 };
 
+const globalSettings = {
+  conferenceStart: null,
+  conferenceFinish: null,
+};
+
+export const setGlobals = (info) => {
+  Object.keys(info).forEach((key) => {
+    globalSettings[key] = info[key];
+  });
+};
+
 let lockedCurrentTime = null;
 
 // const clientTimezone = getClientTimezoneOffset();
@@ -195,14 +206,21 @@ const SchdStatus = {
   before: 'before',
   now: 'now',
   after: 'after',
+  archived: 'archived',
+  unknown: null,
 };
 
 export const createScheduleEvent = (isoStart, durationMM) => {
+  const globArchiveIso = convertEventTimeToISO(
+    globalSettings.conferenceFinish.date,
+    globalSettings.conferenceFinish.time
+  );
+  const secArchive = iso2sec(globArchiveIso);
   const secStart = iso2sec(isoStart);
   const secEnd = secStart + durationMM * 60;
   return (isoTime) => {
     const sec = iso2sec(isoTime);
-    let status = SchdStatus.now;
+    let status = SchdStatus.unknown;
     let delta = sec - secStart;
     if (sec < secStart) {
       status = SchdStatus.before;
@@ -211,6 +229,13 @@ export const createScheduleEvent = (isoStart, durationMM) => {
     if (sec > secEnd) {
       status = SchdStatus.after;
       delta = sec - secEnd;
+    }
+    if (sec > secArchive) {
+      status = SchdStatus.archived;
+      delta = sec - secArchive;
+    }
+    if (sec >= secStart && sec <= secEnd) {
+      status = SchdStatus.now;
     }
     return {
       status,
@@ -239,6 +264,7 @@ const tmp = {
   getCurrentLocalISO,
   lock1: () => lockCurrentTime('2020-06-18T17:30:00.000+02:00'),
   lock2: () => lockCurrentTime('2020-06-19T17:30:00.000+02:00'),
+  lock3: () => lockCurrentTime('2020-06-20T17:30:00.000+02:00'),
 };
 
 window.tmp = tmp;

@@ -1,5 +1,4 @@
 import React from 'react';
-import TicketMessage from './TicketMessage';
 import { getMessage, getTitle } from './model';
 
 const InfoMessage = ({ title, message }) => {
@@ -15,12 +14,7 @@ const InfoMessage = ({ title, message }) => {
   );
 };
 
-const DialogPopup = ({ type, content, status }) => {
-  const { isAuth } = content;
-  const isAvailable = status && status.status !== 'after';
-  if (!isAuth && isAvailable) {
-    return <TicketMessage />;
-  }
+const DialogPopup = ({ content, status }) => {
 
   const message = getMessage(content, status);
   const title = getTitle(content);

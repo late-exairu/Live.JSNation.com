@@ -14,6 +14,7 @@ const eventNames = [
   'speaker-room',
   'discussion-room',
   'any-room',
+  'link',
 ];
 
 const GlobalStyle = createGlobalStyle`
@@ -30,6 +31,16 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 
+const navOutside = (link) => {
+  const a = document.createElement('a');
+  a.href = link;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+};
+
 const useBusEvents = (bus) => {
   const [isOpen, setOpen] = React.useState(false);
   const [type, setType] = React.useState(null);
@@ -37,11 +48,32 @@ const useBusEvents = (bus) => {
 
   const close = () => setOpen(false);
 
+  const getDetails = (content) => {
+    const status = content ? getEventStatus(content) : null;
+    const isNow = status && status.status === 'now';
+    const eventIsAuth = content && content.isAuth;
+    const isAuth = eventIsAuth !== null ? eventIsAuth : bus.content.isAuth;
+
+    return {
+      status: status && status.status,
+      isNow,
+      isAuth,
+    };
+  };
+
   const onEvent = ({ type, payload }) => {
     if (type === 'click' && eventNames.includes(payload.name)) {
-      setOpen(true);
       setType(payload.name);
       setContent(payload);
+
+      const { status, isAuth } = getDetails(payload);
+
+      /* if link is available just click it */
+      if ((!status || status === 'now') && isAuth) {
+        navOutside(payload.link);
+      } else {
+        setOpen(true);
+      }
     }
   };
 
@@ -53,8 +85,7 @@ const useBusEvents = (bus) => {
     return unsubscribe;
   }, []);
 
-  const status = content ? getEventStatus(content) : null;
-  const isNow = status && status.status === 'now';
+  const { status, isAuth, isNow } = getDetails(content);
 
   return {
     isOpen,
@@ -63,21 +94,30 @@ const useBusEvents = (bus) => {
     content,
     status,
     isNow,
+    isAuth,
   };
 };
 
 const App = ({ bus }) => {
-  const { isOpen, close, type, content, status, isNow } = useBusEvents(bus);
+  const { isOpen, close, type, content, status, isAuth } = useBusEvents(bus);
 
-  if (!content) {
+  if (!content || !isOpen) {
     return null;
   }
 
-  const { isAuth } = content;
-  if (isNow && isAuth) {
-    return <NewTab to={content.link} />;
+  if (!isAuth && status !== 'archived') {
+    /* not Auth users always see tickets message */
+    return (
+      <DialogOverlay isOpen={isOpen} onDismiss={close}>
+        <GlobalStyle isOpen={isOpen} />
+        <DialogContent aria-label="this activity is not available">
+          {isOpen ? <TicketMessage /> : null}
+        </DialogContent>
+      </DialogOverlay>
+    );
   }
 
+  /* Auth users if not followed the link will see the popup with explanation */
   return (
     <DialogOverlay isOpen={isOpen} onDismiss={close}>
       <GlobalStyle isOpen={isOpen} />

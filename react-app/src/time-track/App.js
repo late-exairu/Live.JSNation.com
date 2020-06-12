@@ -9,8 +9,8 @@ import { mergeSchedule } from './magic';
 const App = ({ bus }) => {
   const content = bus.getContent();
   const { customTracks, schedule, scheduleExtends, isAuth } = content;
-  const startTime = { date: 'June 18', time: '15:00' };
-  const endTime = { date: 'June 19', time: '24:00' };
+  const startTime = content.eventInfo.conferenceStart;
+  const endTime = content.eventInfo.conferenceFinish;
   const timeTicks = createTimeTicks(startTime, endTime);
   const calcPosition = calcPositionFromTime(startTime);
   const trackWidth = calcPosition(endTime);
@@ -33,7 +33,11 @@ const App = ({ bus }) => {
   return (
     <Container>
       <Aside schedule={mSchedule} customTracks={customTracks} />
-      <TracksContent timeTicks={timeTicks} trackWidth={trackWidth} calcPosition={calcPosition}>
+      <TracksContent
+        timeTicks={timeTicks}
+        trackWidth={trackWidth}
+        calcPosition={calcPosition}
+      >
         {mSchedule.map((sch) => (
           <Track
             track={sch}

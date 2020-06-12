@@ -22,7 +22,7 @@ export const getEventStatus = (payload) => {
 };
 
 export const getMessage = (content, status) => {
-  if (status.status === 'before') {
+  if (status === 'before') {
     try {
       const { data } = content;
       const local = convertEventTimeToLocal(data.date, data.time);
@@ -32,28 +32,27 @@ export const getMessage = (content, status) => {
     }
   }
 
-  if (status.status === 'after') {
-    const { deltaMM } = status;
-    if (deltaMM < 12 * 60) {
-      return 'Sorry. This room is closed';
-    } else {
-      return (
-        <span>
-          Event moved to the archive. Checkout{' '}
-          <a href="http://gitnation.org" target="_blank">
-            http://gitnation.org
-          </a>{' '}
-          for future events.
-        </span>
-      );
-    }
+  if (status === 'after') {
+    return 'Sorry. This activity is over.';
+  }
+
+  if (status === 'archived') {
+    return (
+      <span>
+        Event moved to the archive. Checkout{' '}
+        <a href="http://gitnation.org" target="_blank">
+          http://gitnation.org
+        </a>{' '}
+        for future events.
+      </span>
+    );
   }
 };
 
 export const getTitle = (content) => {
   try {
-    return content.data.linkText;
+    return content.data.title || content.data.linkText;
   } catch (err) {
-    return 'Activity Room';
+    return 'Activity';
   }
 };

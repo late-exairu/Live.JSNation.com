@@ -16,6 +16,7 @@
   <body>
     {{eventsLayer.initEventsLayer(pageKey)}}
     {{eventsLayer.mountPoint('dialog-popup')}}
+    {{eventsLayer.sendContent('eventInfo', customContent.eventInfo )}}
     {{eventsLayer.sendContent('scheduleExtends', customContent.scheduleExtends )}}
     {{eventsLayer.sendContent('customTracks', customContent.tracks )}}
     {{eventsLayer.sendContent('schedule', schedule )}}
