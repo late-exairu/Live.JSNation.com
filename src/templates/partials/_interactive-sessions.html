@@ -13,11 +13,14 @@
 				<div class="features-block__links">
 					{% for link in feature.links %}
 						{% if link.link %}
-							{% if fakeLinks %}
-							<a class="features-block__link" href="link-to-booking" data-fancybox data-src="#popup-ticket">{{link.name}}</a><br/>
-							{% else %}
-							<a class="features-block__link" href="{{link.link}}">{{link.name}}</a><br/>
-							{% endif %}
+							<a
+                class="features-block__link"
+                href="#"
+                onclick={{ eventsLayer.openDialog({name: 'link', isAuth: not fakeLinks, link: link.link, data: feature | dump })   }}
+              >
+                  {{link.name}}
+              </a>
+              <br/>
 						{% endif %}
 					{% endfor %}
 				</div>
