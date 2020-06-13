@@ -5,9 +5,9 @@
       {{ mixins.text(pieceOfTexts, 'workshops__text') }}
     </div>
 
-    <div class="section__title">{{ mixins.text(pieceOfTexts, 'workshops__paidTitle') }}</div>
+    <div class="section__title" id="paid-workshops">{{ mixins.text(pieceOfTexts, 'workshops__paidTitle') }}</div>
 
-    <div class="workshops__content" id="paid-workshops">
+    <div class="workshops__content">
       {% for workshop in workshops %}
         {% if not workshop.includedToPackage %}
           <div class="workshop graphcms-container" id="{{ workshop.id }}"
@@ -75,9 +75,9 @@
       {% endfor %}
     </div>
 
-    <div class="section__title">{{ mixins.text(pieceOfTexts, 'workshops__freeTitle') }}</div>
+    <div class="section__title" id="free-workshops">{{ mixins.text(pieceOfTexts, 'workshops__freeTitle') }}</div>
 
-    <div class="workshops__content" id="free-workshops">
+    <div class="workshops__content">
       {% for workshop in workshops %}
         {% if workshop.includedToPackage %}
           <div class="workshop graphcms-container" id="{{ workshop.id }}"
