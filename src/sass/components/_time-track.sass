@@ -44,10 +44,20 @@
 		position: relative
 		z-index: 1
 
+		&:hover
+
+			&::-webkit-scrollbar-thumb
+				background: #666666
+
+			&::-webkit-scrollbar-track
+				background: #ffffff
+
+
 		&::-webkit-scrollbar
-			width: 4px
-			height: 4px
+			width: 10px
+			height: 10px
 			cursor: pointer
+			border-radius: 0
 
 		&::-webkit-scrollbar-button
 			width: 0px
@@ -57,6 +67,7 @@
 			background: #090a09
 			border: 0px none #ffffff
 			border-radius: 0
+			transition: all ease 0.5
 
 		&::-webkit-scrollbar-thumb:hover
 			background: #666666
@@ -68,6 +79,8 @@
 			background: #212424
 			border: 0px none #ffffff
 			border-radius: 50px
+			transition: all ease 0.5
+			cursor: pointer
 
 		&::-webkit-scrollbar-track:hover
 			background: #ffffff
