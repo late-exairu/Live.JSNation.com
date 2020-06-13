@@ -5,10 +5,7 @@
         {{ mixins.text(pieceOfTexts, 'randomparty__text') }}
       </div>
 
-	  {% if fakeLinks %}
-      <button class="btn random-party__btn" data-fancybox data-src="#popup-ticket">Make new friends</button>
-      {% else %}
-      <button class="btn random-party__btn" onclick="openRandomRoom();">Make new friends</button>
-      {% endif %}
+      <button class="btn random-party__btn" onclick={{ eventsLayer.openDialog({name: 'random-room', isAuth: not fakeLinks, link: '', data: customContent.eventInfo.randomRooms | dump })   }}>Make new friends</button>
+
     </div>
 </section>
