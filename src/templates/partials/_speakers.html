@@ -1,6 +1,6 @@
 <section class="section speakers {{speakersMod}}" id="speakers">
 	<div class="container">
-		<h3 class="section__title">{{pages[pageKey].pageSections.speakersTitle}}</h3>
+		<h3 class="section__title">{{ mixins.text(pieceOfTexts, 'speakers__title') }}</h3>
 
 		{% if pagesPieceOfTexts.speakers__subtitle %}
 		<h4 class="section__subtitle">{{ pagesPieceOfTexts.speakers__subtitle }}</h4>
