@@ -111,6 +111,7 @@
 		left: 0
 		z-index: 0
 		overflow: hidden
+		filter: grayscale(100%)
 
 		&:after
 			content: ''
@@ -131,6 +132,7 @@
 .networkers
 	display: flex
 	flex-wrap: wrap
+	background: $themeColor
 
 	&__item
 		position: relative
@@ -166,7 +168,7 @@
 		width: calc(100% - 4px)
 		height: calc(100% - 4px)
 		margin: 2px
-		background: #000
+		background: $themeColorD
 		border-radius: 5px
 
 	&__face
@@ -174,5 +176,5 @@
 		display: block
 		height: 70%
 		width: 100%
-		fill: #20201e
+		fill: $themeColor
 

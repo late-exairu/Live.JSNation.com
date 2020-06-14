@@ -1,6 +1,7 @@
 .schedule
 	padding: 135px 0 0
 	margin: 0 0 80px
+	background: $mainBg2
 	
 	+sm
 		margin: 0 0 50px
@@ -14,25 +15,24 @@
 	+sm
 		padding: 40px 0 0
 	&__item
-		border-top: 2px solid $mainBg2
-		&:last-child
-			border-bottom: 2px solid $mainBg2
+		&:not(:first-child)
+			border-top: 1px solid $gray
 	&__tab-links
 		display: flex
 		margin-bottom: 49px
 		+md
 			margin-bottom: 20px
 	&__tab-link
-		+medium
+		+bold
 		font-size: 20px
 		height: 44px
 		display: flex
 		align-items: center
 		text-align: center
-		color: #000
+		color: $text2
 		text-decoration: none
 		position: relative
-		text-transform: uppercase
+		padding: 0 10px
 		margin: 0 0 0 56px
 		cursor: pointer
 		transition: all ease 0.2s
@@ -67,6 +67,10 @@
 			margin: 0
 	&__tab
 		display: none
+		border: 1px solid $gray
+		border-radius: 7px
+		overflow: hidden
+
 		&.is-active
 			display: block
 
@@ -89,8 +93,10 @@
 
 .s-item
 	background: #fff
+	color: $text2
 	border-left: 1px solid $mainBg2
 	border-right: 1px solid $mainBg2
+	+bold
 	&__row
 		display: flex
 		+sm
@@ -130,14 +136,16 @@
 				margin: 0
 				padding-top: 0
 	&__time
-		font-size: 14px
+		font-size: 18px
 		font-weight: 500
-		margin: 4px 0
+		// margin: 4px 0
+		+sm
+			font-size: 16px
 	&__title
 		font-size: 18px
 		a
-			color: $themeColor2
-		+medium
+			color: $text2
+		+bold
 		+md
 			font-size: 18px
 		+sm
@@ -166,10 +174,11 @@
 
 	&__text
 		letter-spacing: 0.3px
-		color: $themeColor2
+		color: $text2
 		line-height: 1.7
+		+regular
 		+sm
-			color: $themeColor2
+			color: $text2
 		img
 			float: left
 			width: 30%
@@ -177,10 +186,11 @@
 		a
 			color: #fff
 	&__company
+		+regular
 		font-size: 14px
-		color: $themeColor2
+		color: $text2
 		+sm
-			color: $themeColor2
+			color: $text2
 
 .talks-list
 	.s-item
@@ -248,13 +258,14 @@
 					margin: 0
 
 		&__text
+			+regular
 			line-height: 1.6
 			margin-top: 10px
 
 			a
 				color: #fff
 		&__title
-			+regular
+			+bold
 
 	.talk__item
 		margin-top: 6px

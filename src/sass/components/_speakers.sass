@@ -61,21 +61,22 @@
 	.speaker
 
 		&__desc
-			color: $themeColor2
+			color: $text2
 
 			+sm
-				color: $themeColor2
+				color: $text2
 
 		&__social-link
 			.icon
-				fill: $themeColor2
+				fill: $text2
 			&:hover
 				.icon
-					fill: #000
+					fill: $themeColor
 
 .speaker
 	position: relative
 	padding: 19px
+	color: $text2
 
 	&:hover
 		&:after
@@ -198,6 +199,7 @@
 			width: 100%
 			height: auto
 			object-fit: cover
+			border-radius: 8px
 			filter: grayscale(100%) contrast(110%)
 
 
@@ -213,8 +215,7 @@
 
 	&__name
 		font-size: 22px
-		font-weight: 700
-		text-transform: uppercase
+		+bold
 		margin-bottom: 11px
 		letter-spacing: 0.65px
 		overflow: hidden
@@ -222,6 +223,7 @@
 		+xs
 			font-size: 20px
 	&__company
+		+medium
 		font-size: 16px
 		margin-bottom: 16px
 		font-weight: 500
@@ -232,6 +234,7 @@
 		font-size: 12px
 		line-height: 1.68
 		word-wrap: break-word
+		color: $text2
 		+sm
 			font-size: 13px
 		+xs
@@ -254,10 +257,10 @@
 		.icon
 			transition: 0.3s
 			font-size: 18px
-			fill: #fff
+			fill: $text2
 		&:hover
 			.icon
-				fill: $themeColor
+				fill: $text
 	&--mc
 		.speaker
 			&__photo
@@ -355,8 +358,8 @@
 	padding: 80px 0 80px
 	background-position: center top
 	background-repeat: repeat
-	background-image: url(../img/bg-net.svg)
-	border-bottom: 2px solid #1d201e
+	// background-image: url(../img/bg-net.svg)
+	// border-bottom: 2px solid #1d201e
 
 	// &:after
 		content: ''

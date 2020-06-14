@@ -37,9 +37,9 @@
 
 	<div class="hero__inner graphcms-container" {{ mixins.cmsData(pages[pageKey]) }}>
 		<div class="hero__logo">
-			<a href="/" class="logo"><img src="img/logo-jsnl.svg" alt="JSNation Live"></a>
+			<a href="/" class="logo"><img src="img/logo-graphqlgs.svg" alt="GraphQL Global Summit"></a>
 		</div>
-		<div class="hero__suptitle">{{ pagesPieceOfTexts.hero__date }}</div>
+		<div class="hero__suptitle">{{ pagesPieceOfTexts.hero__date | safe }}</div>
 		<h1 class="hero__title">{{ pagesPieceOfTexts.hero__title | safe }}</h1>
 
 		{% if pages[pageKey].pageStatistics.eventStats %}
@@ -50,7 +50,7 @@
 			<a href="{{ pages.main.pageStatistics.heroCTA.link }}" class="btn">{{ pages.main.pageStatistics.heroCTA.text }}</a>
 
 			{% if pages.main.pageStatistics.heroOptIn %}
-			<a href="{{ pages.main.pageStatistics.heroOptIn.link }}" class="btn btn--border">{{ pages.main.pageStatistics.heroOptIn.text }}</a>
+			<a href="{{ pages.main.pageStatistics.heroOptIn.link }}" class="btn btn--alt">{{ pages.main.pageStatistics.heroOptIn.text }}</a>
 			{% endif %}
 		</div>
 

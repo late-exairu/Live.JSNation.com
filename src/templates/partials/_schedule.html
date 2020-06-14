@@ -2,6 +2,7 @@
 	{% if(schedule.length == 1) %}
 		<div class="container talks-list">
 			<h3 class="section__title">{{ mixins.text(pieceOfTexts, 'schedule__title') }}</h3>
+
 			{% for talk in schedule[0].list %}
 			<div class="schedule__item">
 				<div class="s-item" id="talk-{{talk.slug}}">
