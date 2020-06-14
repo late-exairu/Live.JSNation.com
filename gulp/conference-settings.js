@@ -1,4 +1,4 @@
-const conferenceTitle = 'GraphQL_Global_Summit';
+const conferenceTitle = 'Live_JSNation';
 const eventYear = 'Y2020';
 
 const tagColors = {

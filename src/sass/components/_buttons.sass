@@ -2,7 +2,7 @@
 	display: flex
 	text-align: center
 	background-color: $themeColor
-	padding: 26px 30px
+	padding: 22px 30px
 	align-items: center
 	justify-content: center
 	text-transform: uppercase
@@ -14,19 +14,16 @@
 	transition: all ease 0.3s 
 	transform: translateZ(0) perspective(1px)
 	backface-visibility: hidden
-	//transform-style: preserve-3d
+	border: 2px solid transparent
 	-webkit-font-smoothing: subpixel-antialiased
 	-webkit-backface-visibility: hidden
-	//-moz-backface-visibility: hidden
-	//-ms-backface-visibility: hidden
-	//-webkit-transform-style: preserve-3d
 	border-radius: 5px
 
 	+tablet
 		padding: 26px 20px
 
 	&:hover
-		background-color: $themeColor2
+		border-color: $white
 
 	&--gradient
 		border: 2px solid transparent
@@ -112,37 +109,21 @@
 		&:hover
 			background: $accent
 			color: $black
+			border: 2px solid $accent
 
 			.icon
 				fill: $black
 
 	&--alt
 		font-size: 12px
-		background: $white
-		border: 2px solid $white
-		color: $black
+		background: $themeColor2
+		border: 2px solid $themeColor2
+		color: $white
 		padding: 15px 20px
 		min-height: 50px
 
 		+tablet
 			padding: 15px 20px
-
-		&:hover
-			background: $themeColor2
-			border-color: $themeColor2
-			color: $white
-
-			.icon
-				fill: $white
-
-
-
-
-	&--alt
-		background-color: $themeColor2
-
-		&:hover
-			background-color: $themeColor
 
 
 
