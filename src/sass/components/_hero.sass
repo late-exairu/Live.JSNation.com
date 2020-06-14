@@ -10,7 +10,6 @@
 	background-repeat: no-repeat
 	background-position: center
 	background-size: cover
-	//background-image: url(../img/hero-overlay.png)
 	background-color: #1e2220
 	z-index: 1
 	pointer-events: none
@@ -21,14 +20,7 @@
 		z-index: 1
 		background-color: #000
 		opacity: 0.35
-	// &:before
-	// 	content: ''
-	// 	+coverdiv
-	// 	z-index: 1
-	// 	background-image: url(../img/hero-overlay.png)
-	// 	background-position: center
-	// 	background-repeat: no-repeat
-	// 	background-size: cover
+
 	+tablet
 		padding: 45px 0 105px
 	+md
@@ -83,21 +75,20 @@
 			padding: 0 15px
 
 	&__logo
-		width: 192px
-		//height: 101px
+		width: 324px
 		margin: 0 auto 78px
+		
 		+tablet
 			margin: 0 auto 36px
-			width: 154px
-		//height: 91px
+			width: 260px
 		+md
-			width: 137px
-			//height: 82px
+			width: 280px
 			margin: 0 auto 48px
 		+xs
 			margin: 0 auto 26px
-			width: 140px
+			width: 200px
 			height: auto
+
 	&__suptitle
 		font-size: 18px
 		margin-bottom: 68px
@@ -116,7 +107,7 @@
 		text-align: center
 		margin-bottom: 68px
 		letter-spacing: -0.02em
-		+medium
+		+extrabold
 		+laptop
 			font-size: 52px
 
@@ -145,8 +136,6 @@
 			line-height: 1.16
 			max-width: calc(100% - 5px)
 	&__btn
-		//max-width: 283px
-		//margin: 0 auto
 		display: flex
 		justify-content: center
 		flex-wrap: wrap
@@ -212,8 +201,8 @@
 		left: 0
 		bottom: 1vw
 		font-size: 15vw
-		font-weight: 600
-		color: #ff2406
+		font-weight: 700
+		color: $themeColor2
 		opacity: .2
 		line-height: 1
 		text-align: left
@@ -282,17 +271,17 @@
 					margin: 15px 0 10px
 
 			&__logo
-				width: 220px
+				width: 320px
 				height: 68px
 				margin: 0
 
 				+md
-					width: 154px
+					width: 244px
 					height: 54px
 					margin: auto 0
 
 				+xs
-					width: 154px
+					width: 220px
 					height: 54px
 
 			&__partner
@@ -384,9 +373,9 @@
             max-width: unset
 
 	&__value
-		font-size: 50px
+		font-size: 52px
 		margin: 0 20px 0 0
-		+regular
+		+bold
 		display: flex
 		align-items: center
 		+md
@@ -407,7 +396,7 @@
 	&__text
 		font-size: 14px
 		line-height: 1.4
-		padding: 5px 0
+		padding: 6px 0
 		&-top
 			font-size: 20px
 			+medium

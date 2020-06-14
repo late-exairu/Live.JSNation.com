@@ -61,17 +61,17 @@
 	.speaker
 
 		&__desc
-			color: $themeColor2
+			color: $text
 
 			+sm
-				color: $themeColor2
+				color: $text
 
 		&__social-link
 			.icon
-				fill: $themeColor2
+				fill: $text
 			&:hover
 				.icon
-					fill: #000
+					fill: $themeColor2
 
 .speaker
 	position: relative
@@ -198,6 +198,7 @@
 			width: 100%
 			height: auto
 			object-fit: cover
+			border-radius: 8px
 			filter: grayscale(100%) contrast(110%)
 
 
@@ -213,7 +214,7 @@
 
 	&__name
 		font-size: 22px
-		font-weight: 700
+		+semibold
 		text-transform: uppercase
 		margin-bottom: 11px
 		letter-spacing: 0.65px
@@ -222,6 +223,7 @@
 		+xs
 			font-size: 20px
 	&__company
+		+medium
 		font-size: 16px
 		margin-bottom: 16px
 		font-weight: 500
@@ -232,6 +234,7 @@
 		font-size: 12px
 		line-height: 1.68
 		word-wrap: break-word
+		color: $text
 		+sm
 			font-size: 13px
 		+xs

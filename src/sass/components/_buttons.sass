@@ -8,7 +8,7 @@
 	text-transform: uppercase
 	font-size: 14px
 	+bold
-	color: $black
+	color: $white
 	text-decoration: none
 	transition: all ease 0.3s 
 	transform: translateZ(0) perspective(1px)
@@ -19,16 +19,17 @@
 	//-moz-backface-visibility: hidden
 	//-ms-backface-visibility: hidden
 	//-webkit-transform-style: preserve-3d
+	border-radius: 5px
 
 	+tablet
 		padding: 26px 20px
 
 	&:hover
-		background-color: #fff
+		background-color: $themeColor2
 
 	&--gradient
 		border: 2px solid transparent
-		color: #000
+		color: $white
 		font-size: 14px
 
 		&:after
@@ -39,7 +40,7 @@
 			bottom: 0
 			right: 0
 			z-index: -2
-			background: linear-gradient(145deg, #fef502, #fef502)
+			background: linear-gradient(145deg, $themeColor, $themeColor2)
 			animation: AnimationName 5s linear infinite
 
 		&:before
@@ -51,7 +52,7 @@
 			bottom: 0
 			right: 0
 			z-index: -1
-			background: linear-gradient(145deg, #fef502, #fef502)
+			background: linear-gradient(145deg, $themeColor, $themeColor2)
 			animation: AnimationName 5s linear infinite
 
 		&:hover
@@ -62,7 +63,7 @@
 
 	&--border
 		border: 2px solid transparent
-		color: #FFF
+		color: $white
 		font-size: 14px
 
 		&:after
@@ -73,7 +74,7 @@
 			bottom: 0
 			right: 0
 			z-index: -2
-			background: linear-gradient(145deg, #fef502, #fef502)
+			background: linear-gradient(145deg, $themeColor, $themeColor2)
 			animation: AnimationName 5s linear infinite
 
 		&:before
@@ -90,11 +91,21 @@
 
 		&:hover
 			background: $themeColor
-			color: #000
+			color: $white
 			&:before
 				opacity: 0
 		+tablet
 			padding: 19px 23px
+
+
+	&--alt
+		background-color: $themeColor2
+
+		&:hover
+			background-color: $themeColor
+
+
+
 
 
 .icon-link
