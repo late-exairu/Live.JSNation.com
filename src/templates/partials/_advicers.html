@@ -1,6 +1,6 @@
 <section class="section speakers {{speakersMod}}" id="advicers">
     <div class="container">
-        <h3 class="section__title">Advice Lounge</h3>
+		<h3 class="section__title">{{ mixins.text(pieceOfTexts, 'advicers__title') }}</h3>
 
         <div class="speakers-list">
           {% for advicer in speakers.advisers %}
