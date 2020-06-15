@@ -1,43 +1,48 @@
 const tabLink = $('.js-tab-link');
 const tabClose = $('.js-tab-close');
 
+const switchTab = ($el) => {
+  const tabIndex = $el.data('tab');
+  const parent = $el.parents('.js-tabs-container');
+  parent.find('.js-tab-link').removeClass('is-active');
+  parent.find('.js-tab-link').removeClass('is-scroll');
+  parent.find('.js-tab').removeClass('is-active');
+  $el.addClass('is-active');
+  if ($(window).width() < 768) {
+    $el.addClass('is-scroll');
+    setTimeout(() => {
+      $el.removeClass('is-scroll');
+    }, 2000);
+  }
+  const jsTabContainer = parent.find(`.js-tab[data-tab="${tabIndex}"]`);
+  jsTabContainer.addClass('is-active');
+};
+
 const initiateTabRoute = () => {
-  const hash = location.hash;
-  const tabRoute = hash.split('/')[1];
-  if (!tabRoute) {
+  const hash = location.hash.split('/')[0];
+
+  if (!hash) {
     return;
   }
-  const tab = $(`#${tabRoute}`);
+
+  const tab = $(`.js-tab-link${hash}`);
+
   if (!tab) {
     return;
   }
-  tab.click();
+  switchTab(tab);
 };
 
 tabLink.on('click', function(e) {
   if ($(this).hasClass('is-active')) {
     return;
   } else {
-    const tabIndex = $(this).data('tab');
-    const parent = $(this).parents('.js-tabs-container');
-    parent.find('.js-tab-link').removeClass('is-active');
-    parent.find('.js-tab-link').removeClass('is-scroll');
-    parent.find('.js-tab').removeClass('is-active');
-    $(this).addClass('is-active');
-    if ($(window).width() < 768) {
-      $(this).addClass('is-scroll');
-      setTimeout(() => {
-        $(this).removeClass('is-scroll');
-      }, 2000);
-    }
-    const jsTabContainer = parent.find(`.js-tab[data-tab="${tabIndex}"]`);
-    jsTabContainer.addClass('is-active');
+    switchTab($(this));
 
     const id = $(this).attr('id');
     if (id) {
-      location.hash = `/${id}`;
+      location.hash = `${id}`;
     }
-
   }
 });
 
