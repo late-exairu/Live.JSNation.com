@@ -7,6 +7,7 @@
 	justify-content: center
 	text-transform: uppercase
 	font-size: 14px
+	cursor: pointer
 	+bold
 	color: $black
 	text-decoration: none
@@ -96,6 +97,26 @@
 		+tablet
 			padding: 19px 23px
 
+	&--border-transparent
+		font-size: 12px
+		background: transparent
+		border: 2px solid $accent
+		color: $accent
+		padding: 15px 20px
+		min-height: 50px
+
+		+tablet
+			padding: 15px 20px
+
+		&:hover
+			background: $accent
+			color: $black
+
+			.icon
+				fill: $black
+
+
+
 
 .icon-link
 	color: #fff
@@ -110,3 +131,4 @@
 	text-decoration: none
 	&:hover
 		text-decoration: underline
+
