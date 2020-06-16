@@ -15,14 +15,6 @@
 			{% include "partials/_sponsors-offers.html" %}
 		{% endif %}
 
-		{% if pages[pageKey].pageSections.fullTicket %}
-			{% include "partials/_full-ticket.html" %}
-		{% endif %}
-
-		{% if pages[pageKey].pageSections.interactiveSessions %}
-			{% include "partials/_interactive-sessions.html" %}
-		{% endif %}
-
 		{% if customContent.videoRooms %}
 			{% include "partials/_video-rooms.html" %}
 		{% endif %}
