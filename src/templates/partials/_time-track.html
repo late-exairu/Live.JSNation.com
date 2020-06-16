@@ -24,33 +24,34 @@
 
 	<div class="container">
 		{% for item in customContent.scheduleExtends %}
-		<div class="broadcast js-tab {% if item.active %}is-active{% endif %}" data-tab="{{loop.index}}">
-			<div class="broadcast__content">
-
-        {% if item.mountPoint %}
-          {{ eventsLayer.mountPoint(item.mountPoint) }}
-        {% endif %}
-
-        {% if fakeLinks %}
-          {% if item.notification %}
-            <p class='broadcats-text'>
-              <a href="liveauth" data-fancybox data-src="#popup-ticket">{{ item.notification }}</a>
-            </p>
-          {% endif %}
-				{% else %}
-          {% if item.broadcastUrlAuth %}
-            <iframe
-              src="{{ item.broadcastUrlAuth }}"
-              width="640"
-              height="360"
-              frameborder="0"
-              allow="fullscreen"
-              allowfullscreen
-            >
-          </iframe>
-          {% endif %}
-				{% endif %}
-			</div>
+		<div class="tab-container js-tab {% if item.active %}is-active{% endif %}" data-tab="{{loop.index}}">
+      {% if item.mountPoint %}
+        {{ eventsLayer.mountPoint(item.mountPoint) }}
+      {% else %}
+        <div class="broadcast">
+          <div class="broadcast__content">
+            {% if fakeLinks %}
+              {% if item.notification %}
+                <p class='broadcats-text'>
+                  <a href="liveauth" data-fancybox data-src="#popup-ticket">{{ item.notification }}</a>
+                </p>
+              {% endif %}
+            {% else %}
+              {% if item.broadcastUrlAuth %}
+                <iframe
+                  src="{{ item.broadcastUrlAuth }}"
+                  width="640"
+                  height="360"
+                  frameborder="0"
+                  allow="fullscreen"
+                  allowfullscreen
+                >
+              </iframe>
+              {% endif %}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
 		</div>
 		{% endfor %}
 	</div>
