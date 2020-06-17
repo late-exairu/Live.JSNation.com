@@ -1311,10 +1311,10 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.41.tgz#4e470c25a99fa0b1f629f1c5ef180a318d399fd0"
   integrity sha512-XcdMT5PSZHiuf7LJIhzKIe+RyYa25S3LHRRvLnZc6iFjwXkrSDJ8J/HWO6VT8d2ZTbawp3VcLEjRF/VN8glCrA==
 
-"@focus-reactive/graphql-content-layer@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@focus-reactive/graphql-content-layer/-/graphql-content-layer-2.3.0.tgz#7e46559b8e915da57e45559182f0013f4d35f188"
-  integrity sha512-iU2NiOyaJvj9OFwvNI37KOTV3epwlfNaaim+5jVfV0vr6/91FvYfsUIkx9kOQtrAd3sMUnVUeHkuklQLuqxKlg==
+"@focus-reactive/graphql-content-layer@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@focus-reactive/graphql-content-layer/-/graphql-content-layer-2.3.1.tgz#993fda40ab81a2f01cbb40621d1c501b2c89e661"
+  integrity sha512-aG3gjh9JKcajhaBMJzUeR72Q7LFpvt1JoVgaambfXJOdIuPzsT9L+V+2E93wVtC8nlnRtJHSQi5lrpilQOokQw==
   dependencies:
     "@focus-reactive/storybook-addon-graphcms" "^1.3.0"
     "@react-theming/storybook-addon" "^0.2.1"
@@ -1339,10 +1339,10 @@
   resolved "https://registry.yarnpkg.com/@focus-reactive/inline-edit/-/inline-edit-1.0.0.tgz#2550edbb5aed76a2c409641b6ed0243f7b3bf99e"
   integrity sha512-ozlxFRwlZN7CR133znUAJsv1jX/QOywlQ0olv+7HlL/ZW6ibo7ZdnNAhOvkvSt5aamr/Pu3H4yzB4PprGl+iwQ==
 
-"@focus-reactive/react-app-layer@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@focus-reactive/react-app-layer/-/react-app-layer-1.1.4.tgz#9201d256f6800833ae8e49d9364410229eb9b374"
-  integrity sha512-eEXYbG3KNKz/0mLfCKSu1YKwIHY8hNL3vI6NXBsDA6jgNK8O082vW3arQZVLpUHnw0NKAiQh3aeS41dIql2zqw==
+"@focus-reactive/react-app-layer@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@focus-reactive/react-app-layer/-/react-app-layer-1.1.5.tgz#136e9c532a695340989b57c056183e71d92a94fc"
+  integrity sha512-K9yJULVyhFdg93O1O+ebV51QCx5QPOmW0wq3hfPQ82bMMnKmdo5XYrG+sLuQ1SmIzXIwEMjmJI90hacA8IL8Pg==
   dependencies:
     "@reach/dialog" "^0.10.3"
     classnames "^2.2.6"
