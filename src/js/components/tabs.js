@@ -19,18 +19,22 @@ const switchTab = ($el) => {
 };
 
 const initiateTabRoute = () => {
-  const hash = location.hash.split('/')[0];
+  try {
+    const hash = location.hash.split('/')[0];
 
-  if (!hash) {
-    return;
+    if (!hash || hash === '#' || hash === '#/') {
+      return;
+    }
+
+    const tab = $(`.js-tab-link${hash}`);
+
+    if (!tab) {
+      return;
+    }
+    switchTab(tab);
+  } catch (err) {
+    console.error(err);
   }
-
-  const tab = $(`.js-tab-link${hash}`);
-
-  if (!tab) {
-    return;
-  }
-  switchTab(tab);
 };
 
 tabLink.on('click', function(e) {
