@@ -31,10 +31,16 @@
         <div class="broadcast">
           <div class="broadcast__content">
             {% if fakeLinks %}
-              {% if item.notification %}
-                <p class='broadcats-text'>
-                  <a href="liveauth" data-fancybox data-src="#popup-ticket">{{ item.notification }}</a>
-                </p>
+              {% if item.broadcastUrl %}
+                <iframe
+                  src="{{ item.broadcastUrl }}"
+                  width="640"
+                  height="360"
+                  frameborder="0"
+                  allow="fullscreen"
+                  allowfullscreen
+                >
+              </iframe>
               {% endif %}
             {% else %}
               {% if item.broadcastUrlAuth %}
