@@ -29,27 +29,27 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/react-jobs.htm
             <ul class=\\"social\\">
               <li class=\\"social__item\\"><a href=\\"https://twitter.com/reactamsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-tw\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-tw\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-tw\\"></use>
                   </svg>
                 </a></li>
               <li class=\\"social__item\\"><a href=\\"https://www.facebook.com/reactamsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-fb\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-fb\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-fb\\"></use>
                   </svg>
                 </a></li>
               <li class=\\"social__item\\"><a href=\\"https://youtube.com/c/ReactConferences\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-yb\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-yb\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-yb\\"></use>
                   </svg>
                 </a></li>
               <li class=\\"social__item\\"><a href=\\"https://reactsummit.com/slack\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-sl\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-sl\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-sl\\"></use>
                   </svg>
                 </a></li>
               <li class=\\"social__item\\"><a href=\\"https://medium.com/@ReactAmsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-md\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-md\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-md\\"></use>
                   </svg>
                 </a></li>
             </ul>
@@ -111,27 +111,27 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/react-jobs.htm
                 <ul class=\\"social social--theme\\">
                   <li class=\\"social__item\\"><a href=\\"https://twitter.com/reactamsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-tw\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-tw\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-tw\\"></use>
                       </svg>
                     </a></li>
                   <li class=\\"social__item\\"><a href=\\"https://www.facebook.com/reactamsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-fb\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-fb\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-fb\\"></use>
                       </svg>
                     </a></li>
                   <li class=\\"social__item\\"><a href=\\"https://youtube.com/c/ReactConferences\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-yb\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-yb\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-yb\\"></use>
                       </svg>
                     </a></li>
                   <li class=\\"social__item\\"><a href=\\"https://medium.com/@ReactAmsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-md\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-md\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-md\\"></use>
                       </svg>
                     </a></li>
                   <li class=\\"social__item\\"><a href=\\"https://reactsummit.com/slack\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-sl\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-sl\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-sl\\"></use>
                       </svg>
                     </a></li>
                 </ul>

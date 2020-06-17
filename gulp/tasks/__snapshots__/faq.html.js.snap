@@ -29,27 +29,27 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
             <ul class=\\"social\\">
               <li class=\\"social__item\\"><a href=\\"https://twitter.com/reactamsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-tw\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-tw\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-tw\\"></use>
                   </svg>
                 </a></li>
               <li class=\\"social__item\\"><a href=\\"https://www.facebook.com/reactamsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-fb\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-fb\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-fb\\"></use>
                   </svg>
                 </a></li>
               <li class=\\"social__item\\"><a href=\\"https://youtube.com/c/ReactConferences\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-yb\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-yb\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-yb\\"></use>
                   </svg>
                 </a></li>
               <li class=\\"social__item\\"><a href=\\"https://reactsummit.com/slack\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-sl\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-sl\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-sl\\"></use>
                   </svg>
                 </a></li>
               <li class=\\"social__item\\"><a href=\\"https://medium.com/@ReactAmsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                   <svg class=\\"icon icon-md\\">
-                    <use xlink:href=\\"img/sprite.svg#icon-md\\"></use>
+                    <use xlink:href=\\"img/sprite.svg?v2#icon-md\\"></use>
                   </svg>
                 </a></li>
             </ul>
@@ -93,7 +93,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2p2nneeb2g10b73makporca\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -112,7 +112,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2p2ond6944k0b66okeh44x4\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -125,7 +125,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qaplkyfgsy0b66pkntlkcn\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -141,7 +141,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qaqxeified0b20kevodfpy\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -154,7 +154,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qarw7gfinx0b20c17xfxfn\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -167,7 +167,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qasw4ofivj0b20780oliot\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -180,7 +180,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qatmk0ficm0b32h4xrnc89\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -193,7 +193,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qauhaqfiin0b32mwjr4730\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -209,7 +209,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qavexffiqm0b32u17dmr5y\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -222,7 +222,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qaw7q8fivq0b32qeizc794\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -235,7 +235,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qaxmoxiv7g0b73fvnug38j\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -248,7 +248,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qayg6hfl370b66ci8uhpdg\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -261,7 +261,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qazgi3flbz0b66aah4bvht\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -277,7 +277,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb0lnhfjsi0b32oaiaszcn\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -302,7 +302,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb1qxpfkob0b20mv4zu5en\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -315,7 +315,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb3do1fkzj0b20m66ycs9q\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -329,7 +329,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb464qfl580b2021nrk37s\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -342,7 +342,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb4te9fklw0b3288r87qj7\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -355,7 +355,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb5nsfix4k0b73omegif8g\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -371,7 +371,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb6gakflml0b209fatcpgh\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -384,7 +384,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb77ueflv10b2032h4zqlm\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -400,7 +400,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb83xmfm340b200nwkwzo9\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -413,7 +413,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb93zlfni50b669752ijz6\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -426,7 +426,7 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <li class=\\"faq__item graphcms-container\\" data-id=\\"ck2qb9qyrflpc0b32fbvgiy0m\\" data-content-type=\\"4f4e1bf4ce884d6e99735af934488515\\" data-id-alt=\\"\\" data-content-type-alt=\\"\\">
                   <svg class=\\"faq__arrow\\">
                     <svg class=\\"icon icon-arrow-r2\\">
-                      <use xlink:href=\\"img/sprite.svg#icon-arrow-r2\\"></use>
+                      <use xlink:href=\\"img/sprite.svg?v2#icon-arrow-r2\\"></use>
                     </svg>
                   </svg>
                   <div class=\\"faq__question\\">
@@ -450,27 +450,27 @@ exports[`/home/usul/FocusReactive/GitNation/React.Amsterdam/build/faq.html 1`] =
                 <ul class=\\"social social--theme\\">
                   <li class=\\"social__item\\"><a href=\\"https://twitter.com/reactamsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-tw\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-tw\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-tw\\"></use>
                       </svg>
                     </a></li>
                   <li class=\\"social__item\\"><a href=\\"https://www.facebook.com/reactamsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-fb\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-fb\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-fb\\"></use>
                       </svg>
                     </a></li>
                   <li class=\\"social__item\\"><a href=\\"https://youtube.com/c/ReactConferences\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-yb\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-yb\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-yb\\"></use>
                       </svg>
                     </a></li>
                   <li class=\\"social__item\\"><a href=\\"https://medium.com/@ReactAmsterdam\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-md\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-md\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-md\\"></use>
                       </svg>
                     </a></li>
                   <li class=\\"social__item\\"><a href=\\"https://reactsummit.com/slack\\" class=\\"social__link\\" target=\\"_blank\\">
                       <svg class=\\"icon icon-sl\\">
-                        <use xlink:href=\\"img/sprite.svg#icon-sl\\"></use>
+                        <use xlink:href=\\"img/sprite.svg?v2#icon-sl\\"></use>
                       </svg>
                     </a></li>
                 </ul>
