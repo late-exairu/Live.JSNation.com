@@ -22,6 +22,7 @@ scrollLink.on('click', function() {
       },
       600
     );
+  window._gauges && window._gauges.push(['track']);
 });
 
 wind.resize(() => {

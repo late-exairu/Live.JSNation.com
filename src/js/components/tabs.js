@@ -46,6 +46,7 @@ tabLink.on('click', function(e) {
     const id = $(this).attr('id');
     if (id) {
       location.hash = `${id}`;
+      window._gauges && window._gauges.push(['track']);
     }
   }
 });
