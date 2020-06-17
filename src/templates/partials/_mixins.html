@@ -1,5 +1,5 @@
 {% macro icon(i) %}
-<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg?v2#icon-{{i}}"></use></svg>
 {% endmacro %}
 
 {% macro extended(list) %}
@@ -86,7 +86,7 @@
           <div class="s-item__col ">
             <div class="slider__title s-item__text">
               {% if (activity.isLightning) %}
-              	<svg class="icon icon-lightning"><title>Lightning Talk</title><use xlink:href="img/sprite.svg#icon-lightning"></use></svg>
+              	<svg class="icon icon-lightning"><title>Lightning Talk</title><use xlink:href="img/sprite.svg?v2#icon-lightning"></use></svg>
               {% endif %}
               <span>{{activity.timeString}}</span>
               <span>{{activity.track.name}}</span>
