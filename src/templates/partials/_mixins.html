@@ -74,7 +74,7 @@
   {% endfor %}
 {% endmacro %}
 
-{% macro avatarWithDetails(activity, item) %}
+{% macro avatarWithDetails(activity, item, isAuth, eventsLayer) %}
   <div class="speaker__photo">
     <img src="{{item.avatar}}" alt="{{item.name}}">
     {% if item.label %}
@@ -92,9 +92,13 @@
               <span>{{activity.track.name}}</span>
             </div>
             <div class="s-item__title">{{activity.title}}</div>
-            <a class="anchor-item" data-fancybox data-src="#popup-{{ item.slug }}" href="#" onclick="{{ 'selectGeneralTrack()' if activity.track.isPrimary else 'selectNativeTrack()' }}">
+            <button
+              style="background-color: transparent; color: white; margin: 20px 0;"
+              class="anchor-item"
+              onclick={{ eventsLayer.openDialog({name: 'speaker-card', isAuth: isAuth, data: item | dump })   }}
+            >
               see more...
-            </a>
+            </button>
           </div>
         </div>
       </div>
