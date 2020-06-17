@@ -9,3 +9,8 @@ command = "yarn build"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
+
+[[redirects]]
+  from = "/feedback"
+  to = "https://www.surveymonkey.com/r/jsnation-live"
+
