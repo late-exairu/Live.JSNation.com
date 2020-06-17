@@ -13,6 +13,8 @@ import './components/_faq';
 import './components/_timeTrack';
 import noTouch from './components/noTouch';
 
+$(reactApp);
+
 noTouch();
 $(window).resize(function() {
   $('body').css('--vh', `${window.innerHeight * 0.01}px`);
@@ -43,4 +45,3 @@ countdown();
 
 highlightContent({ contentTypeMap });
 
-$(reactApp);
