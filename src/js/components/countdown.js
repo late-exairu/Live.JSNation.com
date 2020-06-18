@@ -4,8 +4,8 @@ window.dayjs = dayjs;
 
 const content = window.__CONTENT__;
 
-const startTime = content ? content.startGMT : 'June 19, 2020 13:00:00 GMT';
-const durationHH = 6;
+const startTime = content ? content.startGMT : 'June 18, 2020 13:00:00 GMT';
+const durationHH = 32;
 const LIVE = 'LIVE';
 const FINISHED = 'FINISHED';
 
