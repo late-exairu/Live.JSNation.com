@@ -46,12 +46,19 @@
 			{{mixins.eventStats(pages[pageKey].pageStatistics.eventStats)}}
 		{% endif %}
 
-		<div class="hero__btn">
-			<a href="{{ pages.main.pageStatistics.heroCTA.link }}" class="btn" target="_blank">{{ pages.main.pageStatistics.heroCTA.text }}</a>
+<!--		<div class="hero__btn">-->
+<!--			<a href="{{ pages.main.pageStatistics.heroCTA.link }}" class="btn" target="_blank">{{ pages.main.pageStatistics.heroCTA.text }}</a>-->
 
-			{% if pages.main.pageStatistics.heroOptIn %}
-			<a href="{{ pages.main.pageStatistics.heroOptIn.link }}" class="btn btn--border">{{ pages.main.pageStatistics.heroOptIn.text }}</a>
-			{% endif %}
+<!--			{% if pages.main.pageStatistics.heroOptIn %}-->
+<!--			<a href="{{ pages.main.pageStatistics.heroOptIn.link }}" class="btn btn&#45;&#45;border">{{ pages.main.pageStatistics.heroOptIn.text }}</a>-->
+<!--			{% endif %}-->
+<!--		</div>-->
+
+<!-- TODO: Temp for conf days -->
+    <div class="hero__btn">
+			<a class="btn" onclick={{ eventsLayer.openDialog({name: 'watch-livestream' }) }}>Watch the live stream</a>
+
+			<a href="{{ pages.main.pageStatistics.heroCTA.link }}" class="btn btn--border">{{ pages.main.pageStatistics.heroCTA.text }}</a>
 		</div>
 		<div class="hero__partner">
 			{% include "partials/_in-collaboration.html" %}
