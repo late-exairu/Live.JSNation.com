@@ -1339,10 +1339,10 @@
   resolved "https://registry.yarnpkg.com/@focus-reactive/inline-edit/-/inline-edit-1.0.0.tgz#2550edbb5aed76a2c409641b6ed0243f7b3bf99e"
   integrity sha512-ozlxFRwlZN7CR133znUAJsv1jX/QOywlQ0olv+7HlL/ZW6ibo7ZdnNAhOvkvSt5aamr/Pu3H4yzB4PprGl+iwQ==
 
-"@focus-reactive/react-app-layer@^1.1.9":
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/@focus-reactive/react-app-layer/-/react-app-layer-1.1.9.tgz#d4c4e588e6db821c4f1fe8142b8b5eda129a08fe"
-  integrity sha512-26OPqH6fxHcYwPLhLBVoc9QZpBm9SQmH5vY5lTvzhcOd5EkKRe7SsOiD7v100rmGll+cW0+taDitrRFmfNLE5g==
+"@focus-reactive/react-app-layer@^1.1.10":
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/@focus-reactive/react-app-layer/-/react-app-layer-1.1.10.tgz#11a8d0d9c5dd4dad37b79ff31b51dd0e21f6bc5d"
+  integrity sha512-wCZkoTG0T51pYpJ3a9sfk7RUbwM+ZtLwcTCbr0fUK3u3nPs0nFBfNP07odxWg7kn+oU4bvR59CpYy2xGhmyycg==
   dependencies:
     "@reach/dialog" "^0.10.3"
     classnames "^2.2.6"
