@@ -95,10 +95,11 @@
 												<div class="s-item__company">{{talk.from}}</div>
 											{% endif %}
 											{% if talk.title and talk.from %}
-												{#TODO Add to calendar button #}
-												<!-- <a class="schedule__btn btn" href="#">
+                        <button class="schedule__btn btn"
+                        onclick={{ eventsLayer.openDialog({name: 'talk-calendar', isAuth: true, data: talk | dump })   }}>
+                        >
 													Add to calendar
-												</a> -->
+												</button>
 											{% endif %}
 										</div>
 										<div class="s-item__col {{talk.lastColMod}}">
