@@ -4,6 +4,7 @@ import reactApp from '@focus-reactive/react-app-layer';
 
 import './components/tabs';
 import './components/header';
+import './components/noticePanel';
 import { countdown } from './components/countdown';
 import svg4everybody from 'svg4everybody';
 import msieversion from './components/detectIE';
