@@ -48,7 +48,9 @@ fakeLinks: true
 				{% include "partials/_schedule.html" %}
 			{% endif %}
 
+			{% if pages[pageKey].pageSections.lightningTalks %}
 				{% include "partials/_lightning-talks.html" %}
+			{% endif %}
 
 			<div class="separator"></div>
 		</div>
@@ -57,11 +59,11 @@ fakeLinks: true
 			{% include "partials/_extended-program.html" %}
 		{% endif %}
 
-		{% if pages[pageKey].pageSections.committee %}
-			<div class="light">
+		<div class="light">
+			{% if pages[pageKey].pageSections.committee %}
 				{% include "partials/_committee.html" %}
-			</div>
-		{% endif %}
+			{% endif %}
+		</div>
 
 		{% if pages[pageKey].pageSections.fullTicket %}
 			{% include "partials/_full-ticket.html" %}
@@ -118,9 +120,12 @@ fakeLinks: true
 		{% if pages[pageKey].pageSections.sponsors %}
 			{% include "partials/_sponsors.html" %}
 		{% endif %}
+
 		<div class="separator"></div>
 		
-		{% include "partials/_notice-panel.html" %}
+		{% if pages[pageKey].pageSections.noticePanel %}
+			{% include "partials/_notice-panel.html" %}
+		{% endif %}
 		{% include "partials/_footer.html" %}
 	</div>
 
