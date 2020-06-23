@@ -1,4 +1,4 @@
-const conferenceTitle = 'Machine_Learning_EU';
+const conferenceTitle = 'Live_JSNation';
 const eventYear = 'Y2020';
 
 const tagColors = {

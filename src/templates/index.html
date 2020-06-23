@@ -89,38 +89,39 @@ fakeLinks: true
 			{% include "partials/_info-block.html" %}
 		{% endif %}
 
-		{% if pages[pageKey].pageSections.hosts %}
-			{% include "partials/_hosts.html" %}
-		{% endif %}
+		<div class="light">
+			{% if pages[pageKey].pageSections.hosts %}
+				{% include "partials/_hosts.html" %}
+			{% endif %}
 
-		{% if pages[pageKey].pageSections.media %}
-			{% include "partials/_media.html" %}
-		{% endif %}
+			{% if pages[pageKey].pageSections.media %}
+				{% include "partials/_media.html" %}
+			{% endif %}
 
-		{% if pages[pageKey].pageSections.contact %}
-			{% include "partials/_contact-form.html" %}
-		{% endif %}
+			{% if pages[pageKey].pageSections.contact %}
+				{% include "partials/_contact-form.html" %}
+			{% endif %}
 
-		{% if pages[pageKey].pageSections.location %}
-			{% include "partials/_location.html" %}
-		{% endif %}
+			{% if pages[pageKey].pageSections.location %}
+				{% include "partials/_location.html" %}
+			{% endif %}
 
-		{% if pages[pageKey].pageSections.fleet %}
-			{% include "partials/_fleet.html" %}
-		{% endif %}
+			{% if pages[pageKey].pageSections.fleet %}
+				{% include "partials/_fleet.html" %}
+			{% endif %}
 
-		{% if pages[pageKey].pageSections.awards %}
-			{% include "partials/_awards.html" %}
-		{% endif %}
+			{% if pages[pageKey].pageSections.awards %}
+				{% include "partials/_awards.html" %}
+			{% endif %}
 
-		{% if pages[pageKey].pageSections.giving-back %}
-			{% include "partials/_giving-back.html" %}
-		{% endif %}
+			{% if pages[pageKey].pageSections.giving-back %}
+				{% include "partials/_giving-back.html" %}
+			{% endif %}
 
-		{% if pages[pageKey].pageSections.sponsors %}
-			{% include "partials/_sponsors.html" %}
-		{% endif %}
-		<div class="separator"></div>
+			{% if pages[pageKey].pageSections.sponsors %}
+				{% include "partials/_sponsors.html" %}
+			{% endif %}
+		</div>
 		
 		{% include "partials/_notice-panel.html" %}
 		{% include "partials/_footer.html" %}
