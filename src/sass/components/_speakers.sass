@@ -61,17 +61,17 @@
 	.speaker
 
 		&__desc
-			color: $themeColor2
+			color: $text
 
 			+sm
-				color: $themeColor2
+				color: $text
 
 		&__social-link
 			.icon
-				fill: $themeColor2
+				fill: $text
 			&:hover
 				.icon
-					fill: #000
+					fill: $themeColor2
 
 .speaker
 	position: relative
@@ -95,6 +95,7 @@
 		z-index: -1
 		opacity: 0
 		transition: all ease 0.2s
+		border-radius: 10px
 
 	&__tag
 		position: absolute
@@ -198,7 +199,8 @@
 			width: 100%
 			height: auto
 			object-fit: cover
-			filter: grayscale(100%) contrast(110%)
+			border-radius: 10px
+			// filter: grayscale(100%) contrast(110%)
 
 
 		&:hover
@@ -213,7 +215,7 @@
 
 	&__name
 		font-size: 22px
-		font-weight: 700
+		+medium
 		text-transform: uppercase
 		margin-bottom: 11px
 		letter-spacing: 0.65px
@@ -224,7 +226,7 @@
 	&__company
 		font-size: 16px
 		margin-bottom: 16px
-		font-weight: 500
+		+regular
 		+xs
 			font-size: 14px
 			margin-bottom: 20px
@@ -254,10 +256,10 @@
 		.icon
 			transition: 0.3s
 			font-size: 18px
-			fill: #fff
+			fill: $text
 		&:hover
 			.icon
-				fill: $themeColor
+				fill: $themeColor2
 	&--mc
 		.speaker
 			&__photo
@@ -296,6 +298,7 @@
 		visibility: hidden
 		transition: all ease 0.2s
 		color: #fff
+		border-radius: 10px
 
 		+md
 			padding: 15px

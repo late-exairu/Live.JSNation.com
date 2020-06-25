@@ -2,6 +2,7 @@
 	display: flex
 	text-align: center
 	background-color: $themeColor
+	border: 2px solid $themeColor
 	padding: 26px 30px
 	align-items: center
 	justify-content: center
@@ -9,7 +10,7 @@
 	font-size: 14px
 	cursor: pointer
 	+bold
-	color: $black
+	color: $white
 	text-decoration: none
 	transition: all ease 0.3s 
 	transform: translateZ(0) perspective(1px)
@@ -20,12 +21,13 @@
 	//-moz-backface-visibility: hidden
 	//-ms-backface-visibility: hidden
 	//-webkit-transform-style: preserve-3d
+	border-radius: 5px
 
 	+tablet
-		padding: 26px 20px
+		padding: 25px 20px
 
 	&:hover
-		background-color: #fff
+		border-color: $white
 
 	&--gradient
 		border: 2px solid transparent
@@ -116,23 +118,21 @@
 				fill: $black
 
 	&--alt
-		font-size: 12px
-		background: $white
-		border: 2px solid $white
+		border: 2px solid transparent
 		color: $black
 		padding: 15px 20px
 		min-height: 50px
+		background: $themeColorD
 
 		+tablet
 			padding: 15px 20px
 
 		&:hover
-			background: $themeColor2
-			border-color: $themeColor2
-			color: $white
+			border-color: $white
+			color: $black
 
 			.icon
-				fill: $white
+				fill: $black
 
 
 

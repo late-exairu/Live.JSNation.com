@@ -1,4 +1,4 @@
-const conferenceTitle = 'Live_JSNation';
+const conferenceTitle = 'QA_Global_Summit';
 const eventYear = 'Y2020';
 
 const tagColors = {
